@@ -1,5 +1,46 @@
-<nav class="navbar fixed-bottom navbar-light bg-light">
-{%- if site.show-style-guide %}
-    <a href="{{ site.baseurl }}{% link style-guide/index.md %}" class="btn">Style Guide</a>
-{%- endif %}
-</nav>
+{%- assign nodes = site.pages | where: 'nav_active', 'y' | sort: 'nav_order' %}
+
+<footer class="footer w-100">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb bg-transparent">
+                {%- if page.nav_title == 'Home' %}
+                    <li class="breadcrumb-item active"><a href="#">Home</a></li>
+                {%- else %}
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ page.nav_title }}</li>
+                {%- endif %}                 
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+                {%- for node in nodes %}
+            <!--{{page.url | inspect}}-->
+            <!--{{node.url | inspect}}-->
+                {%- assign is_active = false %}
+                {%- if page.url == node.url %}
+                    {%- assign is_active = true %}
+                {%- endif%}
+                {%- comment %}{{ is_active | inspect}}{% endcomment %}
+             <div class="col-4">
+                <a class="{% if is_active %} active{%endif%}" href="{{ node.url | relative_url }}">
+                    {{ node.nav_title }}
+                </a>
+            </div> 
+            {%- endfor %}
+</div>
+</div>
+<nav class="menu">
+    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+    <label class="menu-open-button" for="menu-open">
+        follow us
+    </label>
+    <a href="http://www.facebook.com" target="_blank" class="menu-item item-1"></a>
+    <a href="http://www.twitter.com" target="_blank" class="menu-item item-2"></a>
+    <a href="http://www.instagram.com" target="_blank" class="menu-item item-3"></a>
+
+</nav>  
+</footer>

@@ -1,0 +1,29 @@
+<!--<pre>{{ site.pages | inspect }}</pre>-->
+
+{%- assign nodes = site.pages | where: 'nav_active', 'y' | sort: 'nav_order' %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-pills">
+    <div class="container">
+    <a class="navbar-brand" href="#">Mega Missant</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav">
+            {%- for node in nodes %}
+            <!--{{page.url | inspect}}-->
+            <!--{{node.url | inspect}}-->
+                {%- assign is_active = false %}
+                {%- if page.url == node.url %}
+                    {%- assign is_active = true %}
+                {%- endif%}
+                {%- comment %}{{ is_active | inspect}}{% endcomment %}
+             <li class="nav-item active">
+                <a class="nav-link {% if is_active %} active{%endif%}" href="{{ node.url | relative_url }}">
+                    {{ node.nav_title }}
+                </a>
+            </li> 
+            {%- endfor %}
+      </ul>
+    </div>
+    </div>
+  </nav>

@@ -2,9 +2,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>{{ page.title }}</title>
-<link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/app.scss %}">
-<link rel="stylesheet" href="{{ site.baseurl }}{% link style-guide/css/app.scss %}">
+<link rel="stylesheet" href="{{ 'assets/css/app.css' | relative_url }}">
+<link rel="stylesheet" href="{{ 'assets/css/style-guide.css' | relative_url }}">
 <div class="container">
-{{ content }}
+      {{- content }}
 </div>
 {% include scripts-bottom.html %}

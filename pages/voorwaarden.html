@@ -1,0 +1,115 @@
+---
+layout : default 
+permalink: /verhuurvoorwaarden
+title: Verhuurvoorwaarden &mdash; Mega Missant
+nav_active: y
+nav_title: verhuurvoorwaarden
+nav_order: 50
+
+verhuurvoorwaarden:
+  - 
+    text: U moet Mega Missant met respect behandelen.
+  - 
+    text: U bent ten allen tijde vriendelijk tegen Mega Missant.
+  - 
+    text: U moet lief zijn voor Mega Missant.
+  - 
+    text: U moet waardering tonen voor de aangeboden hulp van Mega Missant.
+  - 
+    text: U apprecieert de moeite die Mega Missant doet tijdens zijn reddingsactie voor u.
+  - 
+    text:  U moet Mega Missant laten uitspreken als hij met zijn uitleg bezig is.
+  - 
+    text: Als u naar een reddingsactie van Mega Missant komt, bent u bereidwillig om te luisteren naar wat Mega Missant te zeggen heeft.
+  - 
+    text: U bewondert de superpowers van Mega Missant.
+  - 
+    text: U moet aangeven wanneer u niet begrijpt wat Mega Missant uitlegt.
+  - 
+    text: Als u een reddingsactie gepland hebt, moet u specifieke vragen of problemen kunnen voorleggen.
+  - 
+    text: U mag Mega Missant enkel inhuren als u na een grondige zoektocht geen oplossingen vindt voor de problemen.
+  - 
+    text: U dient Mega Missant te groeten als u samenkomt voor een reddingsactie.
+  - 
+    text: Na de reddingsactie moet u Mega Missant bedanken.
+  - 
+    text: Nadat u Mega Missant hebt bedankt, zegt u gedag.
+  - 
+    text: U kan Mega Missant enkel gebruiken voor de zaken waarvoor zijn superpowers dienen.
+  - 
+    text: Bij verkeerd gebruik van de superpowers van Mega Missant, verliest u al uw verzamelde credits.
+  - 
+    text: Misbruik van de superpowers van Mega Missant in welke vorm dan ook, is niet toegestaan.
+  - 
+    text: Bij verhuur van Mega Missant in de ochtend, vraagt u of hij graag koffie wenst. Indien ja, gaat u koffie halen voor Mega Missant anders geraken zijn superpowers uitgewerkt.
+  - 
+    text: Bij verhuur van Mega Missant tijdens de middagpauze, dient u een dessertje te voorzien.
+  - 
+    text: Bij verhuur van Mega Missant in de late namiddag/avond, dient u hem na de reddingsactie nog een fijne avond te wensen.
+  - 
+    text: Als u ziet dat Mega Missant uitgeput is na de vele reddingsacties van die dag, dient u aan te bieden of Mega Missant een taxi wenst naar huis.
+  - 
+    text: Als u Mega Missant hebt ingehuurd, dient u naar de reddingsactie te komen. Zo niet, dan verliest u alle opgenomen credits voor die reddingsactie. Later biedt u uw excuses aan aan Mega Missant omdat u niet bent komen opdagen wanneer u verwacht werd.
+  - 
+    text: Onnodige oproepen van een reddingsactie resulteren in het verlies van alle opgenomen credits.
+  - 
+    text: U moet Mega Missant minimaal 2 uur op voorhand te laten weten als u niet naar zijn reddingsactie kan komen. Als u dat niet doet, verliest u alle opgenomen credits.
+  - 
+    text: Wanneer Mega Missant niet op de reddingsactie is komen opdagen, gaat u zelf naar hem om de opgenomen credits terug te krijgen.
+  - 
+    text: Wanneer Mega Missant u vragen stelt, moet u op die vragen antwoorden.
+  - 
+    text: U moet begrijpen dat Mega Missant zijn pauze's opofferd om naar een reddingsactie voor u te komen.
+  - 
+    text: U moet uw tijd goed plannen zodat u niet in een van de laatste lesweken een reddingsactie moet plannen, want dan zit het reddingsschema van Mega Missant overvol.
+  - 
+    text: Behandel Mega Missant zoals u zelf behandelt wilt worden.
+  - 
+    text: Indien Mega Missant jarig is, wenst u hem een fijne verjaardag.
+  - 
+    text: Indien Mega Missant jarig is, bakt u een verjaardagstaart voor hem.
+  - 
+    text: Indien Mega Missant jarig is, zingt u een liedje voor hem.
+  - 
+    text: Als de auto van Mega Missant in panne is gevallen, moet u hem altijd hulp aanbieden.
+  - 
+    text: U moet altijd uw uiterste best doen, want Mega Missant doet dat ook voor u.
+  - 
+    text: U beledigd Mega Missant in geen enkel geval.
+  - 
+    text: Indien u Mega Missant toch hebt beledigd, biedt u uw excuses aan.
+  - 
+    text: Als Mega Missant er niet blij uitziet, probeert u hem op te vrolijken met goed uitziend grafisch materiaal.
+  - 
+    text: Als u zelf niets probeert met uw code, zal er rook uit Mega Missants oren komen.
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <h1 id="point01">{{ page.nav_title }}</h1>
+            <ul>
+                {%- assign positions = page.verhuurvoorwaarden | size %}
+                {%- assign value = 0 %}
+                {%- assign count = 1 %}
+                {%- assign positions = positions | divided_by: 3 %}
+                {%- for item in page.verhuurvoorwaarden %}
+                    {%- assign temp = positions | times: count %}
+                    {%- if value == temp %}
+                        {%- assign count = count | plus: 1 %}
+                        {{ count | inspect }}
+                        {%- if count >= 10 %}
+                        <li id="point{{ count }}">{{ item.text }}</li>
+                        {%- else %}
+                        <li id="point0{{ count }}">{{ item.text }}</li>
+                        {%- endif %}
+                    {%- else %}
+                        <li>{{ item.text }}</li>
+                    {%- endif %}
+                    {%- assign value = value | plus: 1 %}
+                {%- endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

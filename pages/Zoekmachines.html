@@ -1,0 +1,32 @@
+---
+#dit is Front Matter (YAML)
+layout: default
+permalink: zoekmachines/
+title: Zoekmachines
+nav_active: y
+published: false
+
+zoekmachines:
+  - 
+    href: https://google.com
+    label: Google
+  - 
+    href: https://bing.com
+    label: Bing
+  - 
+    href: https://duckduckgo.com
+    label: Duck Duck Go
+
+---
+<!--{{ page.zoekmachines | inspect }}-->
+{% assign zoekmachines = page.zoekmachines | sort: 'label' %}
+
+<ul> 
+    {% for zoekmachine in zoekmachines %}
+    <li class="text-success">
+        <a href={{ zoekmachine.href }} target="_blank" class="btn-primary">
+            {{ zoekmachine.label }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>

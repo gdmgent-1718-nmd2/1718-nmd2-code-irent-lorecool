@@ -1,13 +1,25 @@
+--- 
+layout : default 
+permalink: / 
+# 
+title: Home &mdash; Mega Missant
+nav_active: y
+nav_title: Home
+nav_order: 00
 ---
-layout   : default
-permalink: /
-# Custom Page Variables
-# ─────────────────────
-title: Bootstrap 4 &mdash; Voorbeeld
----
-<div class="jumbotron">
-    <h1 class="display-3">{{ page.title }}</h1>
-</div>
+
 <div class="container">
-    <a class="btn btn-primary" href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4 documentation</a>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <img class="card-img-top" src="{{ 'assets/images/test.jpg' | relative_url }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Mega Missant</h4>
+                    <p class="card-text">Reserveer nu deze behulpzame expert voor al je problemen en feedback.</p>
+                    <a href="{{'superpowers.html' | relative_url}}" class="btn btn-outline-primary">Mega Missant tijd</a>
+                    <p class="text-warning">Haast je! Er zijn nog maar een beperkt aantal momenten beschikbaar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
