@@ -186,6 +186,26 @@ input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3) {
   opacity: 1;
 }
 
+.timeband{
+width: 200%;
+position: relative;
+left: 80px;
+}
+
+.timeband .time{
+width: 25%;
+}
+
+.timeband .time.active{
+border: 1px solid red;
+}
+
+.divider{
+  position: relative;
+margin-left:70%; 
+top:-50%;
+}
+
 //------------------------------------------//
 //          Qr code scanner                 //
 //------------------------------------------//
@@ -210,8 +230,10 @@ label{
   background:url('//dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg') 50% 50% no-repeat;
   height:1em; 
   width:1.7em; 
-  margin-left:-1.7em; 
   cursor:pointer;
+  position: relative;
+  top: -30px;
+  left: 125px;
 }
 
 .qrcode-text-btn > input[type=file] {
@@ -221,10 +243,16 @@ label{
   height:1px; 
   opacity:0;
 }
+input#checkqr{
+  position: relative;
+  top: -58px;
+  left: 170px;
+}
 
 #qrscanner{
   position: relative;
-  top:100%;
+  margin-top:50px;
+  margin-bottom: 160px;
 }
 //------------------------------------------//
 //            Scroll-indicator              //
@@ -314,14 +342,14 @@ a {
    .menu-open { display: none; }
  
    .menu {
-    right: 15%;
+    right: 35px;
     width: 40px;
     height: 0px;
     text-align: center;
     box-sizing: border-box;
     font-size: 20px;
     position: relative;
-    bottom: 40%;
+    bottom: 60px;
     z-index: 3;
     float: right;
    }
@@ -459,6 +487,21 @@ a {
    
    .citem-3it a:hover { text-decoration: underline; }
  
+//------------------------------------------//
+//              reservatie                  //
+//------------------------------------------//
+.panel.list-group{
+  margin-top:50px;
+}
+
+.panel.list-group .title{
+  background-color: rgb(54, 54, 54);
+  color: white;
+}
+
+.panel.list-group .subtitle{
+  background-color: lightgrey;
+}
 
 
 //------------------------------------------//
@@ -475,6 +518,9 @@ body {
 margin-top:20px;
 }
 
+img{
+  width: 100%;
+}
 .card-img-top{
   width:98%;
   align-self: center;
@@ -492,3 +538,29 @@ margin-top:20px;
   background-color: lightgray;
   color:white;
 }
+
+//------------------------------------------//
+//              media queries                     //
+//------------------------------------------//
+
+@media (min-width: 576px) {
+  input#checkqr{
+   top:0;
+   left: 0;
+    } 
+    .qrcode-text-btn{
+      top:0;
+      left:0;
+    }
+  
+  
+  }
+@media (min-width: 768px) {
+  .container {
+    } }
+@media (min-width: 992px) {
+  .container {
+   } }
+@media (min-width: 1200px) {
+  .container {
+   } }

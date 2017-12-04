@@ -9,7 +9,9 @@
 </head>
 
 <body>
+{%- if page.scroll == 'y' %}
 {%- include scroll-indicator.html %} 
+{%- endif  %}
 
 {%- include nav.html %}
 

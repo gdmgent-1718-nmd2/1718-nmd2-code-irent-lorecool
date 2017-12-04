@@ -5,6 +5,62 @@ title: plan een reddingsactie &mdash; Mega Missant
 nav_active: n
 nav_title: plan een reddingsactie
 nav_order: 11
+
+active_hours:
+  -
+    hour: 10
+    available: y
+  -
+    hour: 11
+    available: y
+  -
+    hour: 12
+    available: y
+  -
+    hour: 13
+    available: y
+  -
+    hour: 14
+    available: y
+  -
+    hour: 15
+    available: y
+  -
+    hour: 16
+    available: y
+  -
+    hour: 17
+    available: y
+  -
+    hour: 18
+    available: y
+
+active_dates:
+  -
+    day: 17
+    month: December
+    year: 2017
+    available: y
+  -
+    day: 18
+    month: December
+    year: 2017
+    available: y
+  -
+    day: 19
+    month: December
+    year: 2017
+    available: y
+  -
+    day: 20
+    month: December
+    year: 2017
+    available: y
+  -
+    day: 21
+    month: December
+    year: 2017
+    available: y
 ---
 
 <input type="radio" id="carousel-button-1" name="radio-set" />
@@ -43,10 +99,27 @@ nav_order: 11
                 <li>
                   <div class="row">
                     <div class="col-3">
-                      <p>stap 1: kies je tijd en blablabla</p>
-                      <button class="btn btn-primary" id="stap1">Het is Mega Missant Tijd</button>
+                      <h3>stap 1: Kies de tijd van de reddingsactie </h3>
                     </div>
                   </div>
+                  <div class="wrapping">
+                  <div class="row">
+                    <div class="col-8 timeband">
+                      <div class="row">
+                        {%- for hour in page.active_hours %}
+                    <div class="col-1">
+                      <div class="time">
+                        {{ hour.hour }}
+                    </div> 
+                    <span class="divider"> | </span>
+                  </div>
+                        {%- endfor %}
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                  <button class="btn btn-primary" id="stap1">Het is Mega Missant Tijd</button>
+
                 </li>
               </div>
               <div class="col-6">
