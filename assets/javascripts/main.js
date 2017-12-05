@@ -1,26 +1,5 @@
 //script for scroll indicator
-function checkscroll(scroll_top) {
-  var diffrence = 20;
-
-  if (scroll_top >= $('#point01').position().top-diffrence && scroll_top <= $('#point01').position().top+diffrence){
-      $('#section-01').addClass("active");
-      $('#section-02').removeClass("active");
-    $('#section-03').removeClass("active");
-      }
-  if (scroll_top >= $('#point02').position().top-diffrence-20 && scroll_top <= $('#point02').position().top+diffrence){
-    $('#section-01').removeClass("active");
-      $('#section-02').addClass("active");
-    $('#section-03').removeClass("active");
-      
-      }
-  if (scroll_top >= $('#point03').position().top-diffrence && scroll_top >= $('#point03').position().top+diffrence){
-      $('#section-01').removeClass("active");
-      $('#section-02').removeClass("active");
-    $('#section-03').addClass("active");
-      }
-}
-
-function progress(scroll_top) {
+/*function progress(scroll_top) {
     var el = document.getElementById("line_red");
     var max = document.getElementById("line").offsetHeight;
     var docHeight = $(document).height();
@@ -34,13 +13,12 @@ function progress(scroll_top) {
 var interval = 50;
 var timer = window.setInterval(function(){
   var scroll_top = $(document).scrollTop();
-checkscroll(scroll_top);
 progress(scroll_top);
 
 if (yourCodeHasBeenExecuted === true) {
   window.clearInterval(timer);
 }
-}, interval);
+}, interval);*/
 
 //carousel script
 document.getElementById('carousel-button-2').checked=true;

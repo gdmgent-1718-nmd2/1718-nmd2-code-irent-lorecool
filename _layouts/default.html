@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="{{ 'assets/css/app.css' | relative_url }}">
 </head>
 
-<body>
 {%- if page.scroll == 'y' %}
+<body data-spy="scroll" data-target="#list-example" id="deel01">
 {%- include scroll-indicator.html %} 
+{%- else%}
+<body>
 {%- endif  %}
 
 {%- include nav.html %}
 
 {{ content }}
+
 
 {%- include footer.html %}
 

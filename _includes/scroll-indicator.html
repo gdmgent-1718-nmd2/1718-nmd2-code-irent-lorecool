@@ -1,7 +1,22 @@
 <nav id="indicator">
-   <!-- <div id="line">&nbsp;</div>
-    <div id="line_red">&nbsp;</div>-->
-    <a href="#point01"> <div class="circle active" id="section-01"></div></a>
-    <a href="#point02"> <div class="circle" id="section-02"></div></a>
-    <a href="#point03"> <div class="circle" id="section-03"></div></a>
+{%- if page.nav_title == 'verhuurvoorwaarden' %}
+    <div id="list-example" class="list-group">
+            <a class="list-group-item list-group-item-action" href="#deel01"></a>
+            <a class="list-group-item list-group-item-action" href="#deel02"></a>
+            <a class="list-group-item list-group-item-action" href="#deel03"></a>
+
+    </div>
+{%- endif %}
+
+{%- if page.nav_title == 'Over ons' %}
+<div id="list-example" class="list-group">
+        <a class="list-group-item list-group-item-action" href="#deel01"></a>
+        <a class="list-group-item list-group-item-action" href="#deel02"></a>
+        <a class="list-group-item list-group-item-action" href="#deel03"></a>
+        <a class="list-group-item list-group-item-action" href="#deel04"></a>
+        <a class="list-group-item list-group-item-action" href="#deel05"></a>
+        <a class="list-group-item list-group-item-action" href="#deel06"></a>
+        <a class="list-group-item list-group-item-action" href="#deel07"></a>
+</div>
+{%- endif %}
 </nav>

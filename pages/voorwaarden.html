@@ -89,11 +89,11 @@ verhuurvoorwaarden:
 <div class="container">
     <div class="row">
         <div class="col-11 col-md-9 col-lg-8">
-            <h1 id="point01">{{ page.nav_title }}</h1>
+            <h1>{{ page.nav_title }}</h1>
             <ul>
                 {%- assign positions = page.verhuurvoorwaarden | size %}
                 {%- assign value = 0 %}
-                {%- assign count = 1 %}
+                {%- assign count = 0 %}
                 {%- assign positions = positions | divided_by: 3 %}
                 {%- for item in page.verhuurvoorwaarden %}
                     {%- assign temp = positions | times: count %}
@@ -101,9 +101,9 @@ verhuurvoorwaarden:
                         {%- assign count = count | plus: 1 %}
                         {{ count | inspect }}
                         {%- if count >= 10 %}
-                        <li id="point{{ count }}">{{ item.text }}</li>
+                        <li id="deel{{ count }}">{{ item.text }}</li>
                         {%- else %}
-                        <li id="point0{{ count }}">{{ item.text }}</li>
+                        <li id="deel0{{ count }}">{{ item.text }}</li>
                         {%- endif %}
                     {%- else %}
                         <li>{{ item.text }}</li>
