@@ -3,7 +3,9 @@
 {%- assign nodes = site.pages | where: 'nav_active', 'y' | sort: 'nav_order' %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav-pills">
     <div class="container">
-    <a class="navbar-brand" href="{{ 'index.html' | relative_url }}">Mega Missant</a>
+    <a class="navbar-brand" href="{{ 'index.html' | relative_url }}">
+        <img id="icon-mega-missant" src="{{ 'assets/images/trans.png' | relative_url }}" alt="home-icon">                                    
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,7 +21,7 @@
                 {%- comment %}{{ is_active | inspect}}{% endcomment %}
              <li class="nav-item active">
                 <a class="nav-link {% if is_active %} active{%endif%}" href="{{ node.url | relative_url }}">
-                    {{ node.nav_title }}
+                  <img id="{{ node.nav_icon }}" src="{{ 'assets/images/trans.png' | relative_url }}" alt="{{ node.nav_icon}}">  {{ node.nav_title }}
                 </a>
             </li> 
             {%- endfor %}

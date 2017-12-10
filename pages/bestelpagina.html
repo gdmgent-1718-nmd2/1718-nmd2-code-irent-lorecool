@@ -63,21 +63,25 @@ active_dates:
     available: y
 ---
 
-<input type="radio" id="carousel-button-1" name="radio-set" />
-<input type="radio" id="carousel-button-2" name="radio-set" checked="checked" />
-<input type="radio" id="carousel-button-3" name="radio-set" />
+
 <div class="img-container">
+    <input type="radio" id="carousel-button-1" name="radio-set" />
+    <input type="radio" id="carousel-button-2" name="radio-set" checked="checked" />
+    <input type="radio" id="carousel-button-3" name="radio-set" />
+    <label for="carousel-button-1" ><h3> o </h3> </label>
+    <label for="carousel-button-2" ><h3> o </h3> </label>
+    <label for="carousel-button-3" ><h3> o </h3> </label>
   <div class="img-slide">
     <div class="inner">
       <div class="row">
         <div class="col-3">
-          <img id="img-left" src="http://via.placeholder.com/150x150" alt="Third slide">
+          <img id="img-left" src="assets/images/Missant_rechtstaand_uitleg.jpg" alt="left slide">
         </div>
         <div class="col-6">
-          <img id="img-center" src="https://picsum.photos/150x75" alt="Third slide">
+          <img id="img-center" src="assets/images/Missant_helpen_laptop.jpg" alt="center slide">
         </div>
         <div class="col-3">
-          <img id="img-right" src="http://via.placeholder.com/150x150" alt="Third slide">
+          <img id="img-right" src="assets/images/Missant_helpendeHand.jpg" alt="right slide">
         </div>
       </div>
     </div>
@@ -98,45 +102,91 @@ active_dates:
               <div class="col-6">
                 <li>
                   <div class="row">
-                    <div class="col-3">
+                    <div class="col-8">
                       <h3>stap 1: Kies de tijd van de reddingsactie </h3>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-4">
-                        {%- for day in page.active_dates %}
-                        {{ day.day }}
-                        {{ day.month }}
-                        {{ day.year }}
-                        {%- endfor %}
-                        <h2 id="date-previous"> < </h2>
-
-                        <h2 id="date-next"> > </h2>
-
+                        <div id="dayCarouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                              {%- assign start = 1 %}
+                              {%- for day in page.active_dates %}
+                              {%- if start == 1 %}
+                              <div class="carousel-item justify-content-center active">
+                                <div class="col-1">
+                                <h3>{{ day.day }}</h3>
+                                <p>{{ day.month }}{{ day.year }}</p>
+                                </div>
+                              </div>
+                              {%- else %}
+                              <div class="carousel-item justify-content-center">
+                                  <div class="col-1">
+                                      <h3>{{ day.day }}</h3>
+                                      <p>{{ day.month }}{{ day.year }}</p>
+                                      </div>
+                                </div>
+                              {%- endif %}
+                              {%- assign start = 2 %}
+                              {%- endfor %}
+                            </div>
+                            <a class="carousel-control-prev" href="#dayCarouselControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#dayCarouselControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
                     </div>
                   </div>
-                  <div class="row justify-content-center">
-                    <div class="col-12 col-md-8 timeband">
-                      <div class="row">
-                        {%- for hour in page.active_hours %}
-                    <div class="col-1">
-                      <div class="time">
-                        {{ hour.hour }}
-                    </div> 
-                    <span class="divider"> | </span>
-                  </div>
-                        {%- endfor %}
+                  <div class="row">
+                    <div class="col-4">
+                        <div id="hourCarouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                              {%- assign hourstart = 1 %}
+                              {%- for hour in page.active_hours %}
+                              {%- if hour.available == 'y' %}
+                              {%- if hourstart == 1 %}
+                              <div class="carousel-item justify-content-center active">
+                                <div class="col-1">
+                                <h3>{{ hour.hour }}</h3>
+                                <p>uur</p>
+                                </div>
+                              </div>
+                              {%- else %}
+                              <div class="carousel-item justify-content-center">
+                                  <div class="col-1">
+                                      <h3>{{ hour.hour }}</h3>
+                                      <p>uur</p>
+                                      </div>
+                                </div>
+                              {%- endif %}
+                              {%- assign hourstart = 2 %}
+                              {%- endif %}
+                              {%- endfor %}
+                            </div>
+                            <a class="carousel-control-prev" href="#hourCarouselControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#hourCarouselControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
                     </div>
-                    </div>
                   </div>
-                  <button class="btn btn-primary" id="stap1">Het is Mega Missant Tijd</button>
-
+                  <div class="row">
+                  <button class="btn btn-primary shinny" id="stap1"> <div class="shine">Het is Mega Missant Tijd</div></button>
+                  </div>
                 </li>
               </div>
               <div class="col-6">
                 <li>
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-8">
                         <h3>stap 2: Mega Missant komt jouw richting uitgevlogen op </h3>
                       </div>
                   </div>

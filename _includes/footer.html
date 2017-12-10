@@ -8,45 +8,58 @@
                     <ol class="breadcrumb bg-transparent">
                         {%- if page.nav_title == 'Home' %}
                         <li class="breadcrumb-item active">
-                            <a href="{{ 'index.html' | relative_url }}">Home</a>
+                            <a href="{{ 'index.html' | relative_url }}">
+                                <img id="icon-mega-missant" src="{{ 'assets/images/trans.png' | relative_url }}" alt="home-icon">                                    
+                            </a>
                         </li>
                         {%- else %}
                         <li class="breadcrumb-item">
-                            <a href="{{ 'index.html' | relative_url }}">Home</a>
+                            <a href="{{ 'index.html' | relative_url }}">
+                                <img id="icon-mega-missant" src="{{ 'assets/images/trans.png' | relative_url }}" alt="home-icon">                                                                        
+                            </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">{{ page.nav_title }}</li>
+                        <li class="breadcrumb-item active text-light" aria-current="page">{{ page.nav_title }}</li>
                         {%- endif %}
                     </ol>
                 </nav>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-            {%- assign count= 0 %} {%- for node in nodes %}
-            <!--{{page.url | inspect}}-->
-            <!--{{node.url | inspect}}-->
-            {%- assign is_active = false %} {%- if page.url == node.url %} {%- assign is_active = true %} {%- endif%} {%- comment %}{{
-            is_active | inspect}}{% endcomment %} {%- if count == 3 or count == 0 %}
-            <div class="row">
-                {%- endif %}
-                <div class="col-4">
-                    <a class="{% if is_active %} active{%endif%}" href="{{ node.url | relative_url }}">
-                        {{ node.nav_title }}
-                    </a>
-                </div>
-                {%- if count == 6 or count == 2 %}
+        <div class="col-4">
+            <div class="link-icon">
+                <a href="{{ 'superpowers.html' | relative_url }}">
+                    <img id="icon-superpowers" class="{%- if page.nav_title == 'superpowers' %}active {%- endif %}" src="{{ 'assets/images/trans.png' | relative_url }}" alt="superpowers-icon">
+                </a>
             </div>
-            {%- endif %} {%- assign count = count | plus: 1 %} {%- endfor %}
         </div>
+        <div class="col-4">
+            <div class="link-icon">
+                <a href="{{ 'account.html' | relative_url }}">
+                    <img id="icon-account" class="{%- if page.nav_title == 'Account' %}active {%- endif %}" src="{{ 'assets/images/trans.png' | relative_url }}" alt="account-icon">
+                </a>
+            </div>
         </div>
+        <div class="col-4">
+            <div class="link-icon">
+                <a href="{{ 'overons.html' | relative_url }}">
+                    <img id="icon-overons" class="{%- if page.nav_title == 'Over ons' %}active {%- endif %}" src="{{ 'assets/images/trans.png' | relative_url }}" alt="overons-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a href="{{ 'superpowers.html' | relative_url }}" class="btn btn-outline-primary btn-outline-light w-100 shinny"><div class="shine">Super missant tijd</div></shine></a>
+        </div>
+    </div>
     </div>
 <nav class="menu">
     <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
     <label class="menu-open-button" for="menu-open">
         follow us
     </label>
-    <a href="http://www.facebook.com" target="_blank" class="menu-item item-1"></a>
-    <a href="http://www.twitter.com" target="_blank" class="menu-item item-2"></a>
-    <a href="http://www.instagram.com" target="_blank" class="menu-item item-3"></a>
+    <a href="http://www.facebook.com" target="_blank" class="menu-item item-1"><img id="fb" src="{{ 'assets/images/trans.png' | relative_url }}" alt="fb-icon"></a>
+    <a href="http://www.twitter.com" target="_blank" class="menu-item item-2"><img id="twitter" src="{{ 'assets/images/trans.png' | relative_url }}" alt="twitter-icon"></a>
+    <a href="http://www.instagram.com" target="_blank" class="menu-item item-3"><img id="instagram" src="{{ 'assets/images/trans.png' | relative_url }}" alt="instagram-icon"></a>
 </nav>
 </footer>

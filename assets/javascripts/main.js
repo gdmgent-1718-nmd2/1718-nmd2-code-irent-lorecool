@@ -7,14 +7,11 @@
     var height = el.offsetHeight;
     var newHeight = (((scroll_top+winHeight)/docHeight)*max)-8;
     el.style.height = newHeight + 'px';
-
 }
-
 var interval = 50;
 var timer = window.setInterval(function(){
   var scroll_top = $(document).scrollTop();
 progress(scroll_top);
-
 if (yourCodeHasBeenExecuted === true) {
   window.clearInterval(timer);
 }
@@ -90,4 +87,3 @@ function openQRCamera(node) {
 function showQRIntro() {
   return confirm("Use your camera to take a picture of a QR code.");
 }
-

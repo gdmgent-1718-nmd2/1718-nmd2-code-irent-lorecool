@@ -5,6 +5,7 @@ title: Verhuurvoorwaarden &mdash; Mega Missant
 nav_active: y
 nav_title: verhuurvoorwaarden
 nav_order: 50
+nav_icon: vw
 scroll: y
 
 verhuurvoorwaarden:
@@ -84,6 +85,8 @@ verhuurvoorwaarden:
     text: Als Mega Missant er niet blij uitziet, probeert u hem op te vrolijken met goed uitziend grafisch materiaal.
   - 
     text: Als u zelf niets probeert met uw code, zal er rook uit Mega Missants oren komen.
+  - 
+    text: Het is verboden stiekem foto's te maken van Mega Missant ten alle tijden.
 ---
 
 <div class="container">
@@ -99,7 +102,6 @@ verhuurvoorwaarden:
                     {%- assign temp = positions | times: count %}
                     {%- if value == temp %}
                         {%- assign count = count | plus: 1 %}
-                        {{ count | inspect }}
                         {%- if count >= 10 %}
                         <li id="deel{{ count }}">{{ item.text }}</li>
                         {%- else %}

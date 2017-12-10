@@ -5,6 +5,7 @@ title: Over Ons &mdash; Mega Missant
 nav_active: y
 nav_title: Over ons
 nav_order: 40
+nav_icon: oo
 scroll: y
 
 sections:
@@ -66,7 +67,7 @@ sections:
             {% assign value = section.section_order | modulo:2 %}
             {% if value == 1 %}
             <div class="color-section01" id="deel0{{ id_counter}}">
-                <div class="container">
+                <div class="container shift-left">
                     <div class="row">
                         <div class="col-12">
                             <h3>{{ section.section_title }}</h3>
@@ -84,13 +85,13 @@ sections:
                 <div class="row justify-content-center">
                     <div class="col-1">
                         {%- if id_counter == 7 %}
-                        <a href="#deel1">
-                                <img src="">ddd
+                        <a href="#deel01">
+                                <img class="arrow-up shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                    
                             </a>
                         {%- else %}
                         <a href="#deel0{{ id_counter | plus:1 }}">
-                            <img src="">ddd
-                        </a>
+                                <img class="arrow shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                    
+                            </a>
                         {%- endif %}
                     </div>
                 </div>
@@ -98,7 +99,7 @@ sections:
             </div>
             {% else %}
             <div class="color-section02" id="deel0{{ id_counter}}">
-                <div class="container">
+                <div class="container shift-left">
                     <div class="row">
                         <div class="col-12">
                             <h3>{{ section.section_title }}</h3>
@@ -121,8 +122,8 @@ sections:
                                     </a>
                                 {%- else %}
                                 <a href="#deel0{{ id_counter | plus:1 }}">
-                                    <img src="">ddd
-                                </a>
+                                     <img class="arrow shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                    
+                                    </a>
                                 {%- endif %}
                         </div>
                     </div>
