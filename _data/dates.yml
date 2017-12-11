@@ -1,0 +1,126 @@
+  - day: 17
+    month: December
+    year: 2017
+    available_hours:
+      - hour: 10
+        available: y
+      - hour: 11
+        available: y
+      - hour: 12
+        available: y
+      - hour: 13
+        available: n
+      - hour: 14
+        available: y
+      - hour: 15
+        available: y
+      - hour: 16
+        available: y
+  - day: 18
+    month: December
+    year: 2017
+    available_hours:
+      - hour: 10
+        available: n
+      - hour: 11
+        available: y
+      - hour: 12
+        available: y
+      - hour: 13
+        available: y
+      - hour: 14
+        available: y
+      - hour: 15
+        available: y
+      - hour: 16
+        available: y
+  - day: 19
+    month: December
+    year: 2017
+    available_hours:
+      - hour: 10
+        available: y
+      - hour: 11
+        available: y
+      - hour: 12
+        available: y
+      - hour: 13
+        available: n
+      - hour: 14
+        available: n
+      - hour: 15
+        available: n
+      - hour: 16
+        available: y
+  - day: 20
+    month: December
+    year: 2017
+    available_hours:
+      - hour: 10
+        available: y
+      - hour: 11
+        available: y
+      - hour: 12
+        available: n
+      - hour: 13
+        available: y
+      - hour: 14
+        available: n
+      - hour: 15
+        available: n
+      - hour: 16
+        available: y
+  - day: 21
+    month: December
+    year: 2017
+    available_hours:
+      - hour: 10
+        available: y
+      - hour: 11
+        available: n
+      - hour: 12
+        available: y
+      - hour: 13
+        available: n
+      - hour: 14
+        available: n
+      - hour: 15
+        available: y
+      - hour: 16
+        available: y
+  - day: 22
+    month: December
+    year: 2017
+    available_hours:
+      - hour: 10
+        available: y
+      - hour: 11
+        available: y
+      - hour: 12
+        available: n
+      - hour: 13
+        available: y
+      - hour: 14
+        available: n
+      - hour: 15
+        available: y
+      - hour: 16
+        available: y
+  - day: 23
+    month: December
+    year: 2017
+    available_hours:
+      - hour: 10
+        available: y
+      - hour: 11
+        available: n
+      - hour: 12
+        available: n
+      - hour: 13
+        available: n
+      - hour: 14
+        available: y
+      - hour: 15
+        available: y
+      - hour: 16
+        available: n

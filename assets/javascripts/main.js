@@ -18,38 +18,13 @@ if (yourCodeHasBeenExecuted === true) {
 }, interval);*/
 
 //carousel script
-document.getElementById('carousel-button-2').checked=true;
-
-document.getElementById('carousel-button-1').onclick = function () {
-  document.getElementById('img-left').src="https://picsum.photos/150x150";
-  document.getElementById('img-center').src="http://via.placeholder.com/150x150";
-  document.getElementById('img-right').src="http://via.placeholder.com/150x150";
-
-  document.getElementById('carousel-button-1').checked=true;
-  document.getElementById('carousel-button-2').checked=false;
-  document.getElementById('carousel-button-3').checked=false;
-};
-
-document.getElementById('carousel-button-2').onclick = function () {
-  document.getElementById('img-center').src="https://picsum.photos/150x150";
-  document.getElementById('img-left').src="http://via.placeholder.com/150x150";
-  document.getElementById('img-right').src="http://via.placeholder.com/150x150";
-
-    document.getElementById('carousel-button-2').checked=true;
-    document.getElementById('carousel-button-1').checked=false;
-    document.getElementById('carousel-button-3').checked=false;
-}; 
-
-  document.getElementById('carousel-button-3').onclick = function () {
-
-    document.getElementById('img-right').src="https://picsum.photos/150x150";
-    document.getElementById('img-center').src="http://via.placeholder.com/150x150";
-    document.getElementById('img-left').src="http://via.placeholder.com/150x150";
-    
-      document.getElementById('carousel-button-3').checked=true;
-      document.getElementById('carousel-button-1').checked=false;
-      document.getElementById('carousel-button-2').checked=false;
-    };
+$('.carousel-sync').on('slide.bs.carousel', function(ev) {
+	var dir = ev.direction == 'right' ? 'prev' : 'next';
+  $('.carousel-sync').not('.sliding').addClass('sliding').carousel(dir);
+});
+$('.carousel-sync').on('slid.bs.carousel', function(ev) {
+  $('.carousel-sync').removeClass('sliding');
+});
 
 //script for parallax
     document.getElementById('button-1').checked = true;

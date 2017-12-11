@@ -3,53 +3,36 @@
 //              Carousel                    //
 //------------------------------------------//
 
-.img-container{
-  border:1px solid black;
-  width: 100%; 
-  overflow:hidden;
-  height: 400px;
-}
 
-.img-slide{
-  position: relative;
+.carousell-wrapper{
   width:100%;
-  border:1px solid purple;
-  overflow:hidden;
-}
-.inner{
-  position:relative;
-  width:150%;
-  height: 100%;
-  left:-25%;
-  border:1px solid yellow;
+  overflow-x: hidden;
+  height:auto;
+  overflow-y: hidden;
+  }
+  
+  .carousell-container{
+      position: relative;
+      width: 180%;
+      left: -40%;
+  }
+  
+  .carousell-wrapper, .carousel-inner, .carousel-inner img{
+      height: 30vh;
+  }
 
-}
-.img-container .col-3{
-  border:1px solid red;
-}
-#img-left, #img-center, #img-right{
-  width:100%;
-  height:100%;
-}
+  .carousell-wrapper ol.carousel-indicators{
+    bottom: -5%;
+  }
 
-.img-container input {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  width: 9px;
-  height: 9px;
-  z-index: 1001;
-  cursor: pointer;
-  opacity: 0;
+.carousell-wrapper ol.carousel-indicators li{
+  background: $icon-mega-missant;
+  width: $icon-sm;
+  height: $icon-sm;
 }
-.img-container label{
-  position: relative;
-  color: red;
-
-}
-
-.img-container label:hover {
-  color:blue;
+.carousell-wrapper ol.carousel-indicators li.active{
+  filter: brightness(1.1);
+  transform: scale(1.5);
 }
 
 //------------------------------------------//
@@ -57,23 +40,30 @@
 //------------------------------------------//
 .detail-card {
   position: relative;
-  margin: 10px auto;
   width: 100%;
   height: 100%;
-  border: 10px solid #ddd;
+  border: 10px solid $purple;
   border: 10px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.4);
+}
+.container-fluid.no-padding{
+  padding-left:0;
+  padding-right:0;
+  overflow-x: hidden;
+  margin-top:40px;
+
 }
 
 .detail-content {
-  background: #7d7f72 url("https://i.imgur.com/wO5gzQp.png") repeat scroll 0 0;
+  //background: #7d7f72 url("https://i.imgur.com/wO5gzQp.png") repeat scroll 0 0;
+  background: $green;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
 .detail-bg {
-  background: url("https://i.imgur.com/L6XmtEs.png") repeat-x scroll 0 0;
+  //background: url("https://i.imgur.com/L6XmtEs.png") repeat-x scroll 0 0;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -102,7 +92,7 @@
   position: relative;
   margin: 10px auto;
   width: 100%;
-  height: 100%;
+  height: auto;
   border: 10px solid #ddd;
   border: 10px solid rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
@@ -190,6 +180,9 @@ input.sp-selector-3:checked ~ .sp-content .sp-parallax-bg {
   opacity: 0.4;
   transition: opacity ease-in 0.4s 0.8s;
 }
+.sp-slider li h2{
+  font-size: 18px;
+}
 
 /*verschuiven content*/
 input.sp-selector-1:checked ~ .sp-content .sp-slider {
@@ -212,15 +205,37 @@ input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3) {
 
 //              Step 1                     //
 //               Date                      //
-
-.carousel-item .col-1{
-  margin:auto;
+#dayCarouselControls,#hourCarouselControls,#minutesCarouselControls{
+  height: 15vh;
 }
-.carousel-item .col-1 p{
+
+#dayCarouselControls .carousel-item p, #dayCarouselControls .carousel-item h3,
+#hourCarouselControls .carousel-item p, #hourCarouselControls .carousel-item h3,
+#minutesCarouselControls .carousel-item p, #minutesCarouselControls .carousel-item h3{
+  margin: 6px 30px;
+  padding: auto;
+  top: 15px;
   position: relative;
-  left: -250%;
+  left: 20px;
 }
-
+#dayCarouselControls .carousel-item p,
+{
+  padding: auto;
+  top: 20px;
+  position: relative;
+  left: -15px;
+}
+#hourCarouselControls .carousel-item h3,
+#minutesCarouselControls .carousel-item h3{
+  left: 5px;
+}
+#hourCarouselControls .carousel-item p,
+{
+  left: 6px;
+}
+#minutesCarouselControls .carousel-item p{
+  left:-5px;
+}
 
 
 
@@ -297,6 +312,10 @@ input#checkqr{
   position: relative;
   margin-top:50px;
 }
+
+#qrcode-img{
+margin: 5px;
+}
 //------------------------------------------//
 //            Scroll-indicator              //
 //------------------------------------------//
@@ -327,8 +346,8 @@ nav#indicator {
   nav#indicator .list-group-item#item05.active,
   nav#indicator .list-group-item#item06.active,
   nav#indicator .list-group-item#item07.active{
-    width: $icon-l;
-    height: $icon-l;
+    width: $icon-l+$icon-margin;
+    height: $icon-l+$icon-margin;
 
   }
     nav#indicator .list-group-item#item01.active {
@@ -404,7 +423,7 @@ a {
     width: 40px;
      height: 40px;
      position: absolute;
-     color: $black;
+     color: $white;
      text-align: center;
      line-height: 60px;
      font-size: 0.5em;
@@ -416,7 +435,8 @@ a {
      transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
    }
    .menu-open-button{
-    background: $white;
+    background: $col-shinny-button;
+
    }
    
    .menu-open { display: none; }
@@ -501,9 +521,7 @@ a {
      transform: translate3d(-48px, -40px, 0);
    }
  
-   .menu-item{
 
-   }
    .menu-item img{
     position: relative;
     top:10px;
@@ -581,8 +599,7 @@ a {
 //              button                      //
 //------------------------------------------//
 
-$col-shinny-button: goldenrod;
-$corner-radius: 5px;
+
 
 .shinny {
   text-decoration: none;
@@ -732,9 +749,16 @@ body {
   font-size: 13px;
   color: $black;
   //background: #cdc url("https://i.imgur.com/LtdNdBp.jpg") repeat top left;
-  padding-top: 55px;
+  padding-top: 75px;
   background-color: $green;
 }
+.tekst-wit{
+color: $white;
+font-size: 12px;
+}
+.tekst-wit li{
+  margin-bottom: 5px;
+  }
 
 .shift-left{
   padding-left:70px;
@@ -783,6 +807,11 @@ img{
   background: $icon-mega-missant;
   width: $icon-sm;
   height: $icon-sm;
+}
+
+nav.navbar{
+  background: transparent!important;
+
 }
 
 .navbar #home, .navbar #vw{
@@ -834,8 +863,17 @@ img.arrow{
 //------------------------------------------//
 //              media queries                     //
 //------------------------------------------//
+@media (max-width: 768px) {
+  nav.navbar {
+    background: rgba(0,0,0,0.9)!important;
+  }
+}
 
 @media (min-width: 576px) {
+  nav.navbar {
+    background: rgba(0,0,0,0.9)!important;
+  }
+  
   input#checkqr{
    top:0;
    left: -10%;
@@ -850,6 +888,44 @@ img.arrow{
   
   }
 @media (min-width: 768px) {
+  #dayCarouselControls,#hourCarouselControls, #minutesCarouselControls{
+    height: 20vh;
+  }
+
+  #dayCarouselControls .carousel-item p, #dayCarouselControls .carousel-item h3,
+  #hourCarouselControls .carousel-item p, #hourCarouselControls .carousel-item h3,
+  #minutesCarouselControls .carousel-item p, #minutesCarouselControls .carousel-item h3{
+    margin: 6px 30px;
+    padding: auto;
+    top: 10px;
+    position: relative;
+    left: 280px;
+    font-size: 2.5em;
+  }
+  #hourCarouselControls .carousel-item h3,#minutesCarouselControls .carousel-item h3{
+    left: 270px;
+  }
+
+  #dayCarouselControls .carousel-item p{
+    padding: auto;
+    top: 0px;
+    position: relative;
+    left: 180px;
+  }
+  #hourCarouselControls .carousel-item p, #minutesCarouselControls .carousel-item p{
+    padding: auto;
+    top: 0px;
+    position: relative;
+    left: 260px;
+  }
+  
+  .carousell-wrapper ol.carousel-indicators{
+    bottom: 0;
+  }
+
+  .carousell-wrapper, .carousel-inner, .carousel-inner img{
+    height: 70vh;
+}
 
   nav#indicator {
     z-index:5;
@@ -919,3 +995,23 @@ img.arrow{
 @media (min-width: 1200px) {
   .container {
    } }
+
+//------------------------------------------//
+//              debug classes               //
+//------------------------------------------//
+.banana{
+  color: yellow;
+  border: 3px solid yellow;
+}
+.apple{
+  color: red;
+  border: 3px solid red;
+}
+.kiwi{
+  color: green;
+  border: 3px solid green;
+}
+.berry{
+  color: blue;
+  border: 3px solid blue;
+}

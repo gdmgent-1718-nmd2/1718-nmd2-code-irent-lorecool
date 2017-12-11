@@ -8,66 +8,71 @@
 //
 // Icons
 //
-$icon-l:128px;
-$icon-md:64px;
-$icon-sm:32px;
-$icon-xs:16px;
+$icon-l:128px;      //0         y=  0px
+$icon-md:64px;      //128 + 16  y=  144px
+$icon-sm:32px;      //192 + 32  y=  224px
+$icon-xs:16px;      //224 + 48  y=  272px   -> animation 272 + 32 = 304px
+$icon-margin:16px;  
 
-$icon-facebook:url(../images/Icon_sprites.png) -(6*$icon-sm) -192px no-repeat;
-$icon-facebook-hover:url(../images/Icon_sprites.png) -(7*$icon-sm) -192px no-repeat;
+//-($icon-margin+(6*($icon-l+$icon-margin))
 
-$icon-instagram:url(../images/Icon_sprites.png) -(8*$icon-sm) -192px no-repeat;
-$icon-instagram-hover:url(../images/Icon_sprites.png) -(9*$icon-sm) -192px no-repeat;
+$icon-facebook:url(../images/Icon_sprites.png) -($icon-margin+(6*($icon-sm+$icon-margin))) -224px no-repeat;
+$icon-facebook-hover:url(../images/Icon_sprites.png) -($icon-margin+(7*($icon-sm+$icon-margin))) -224px no-repeat;
 
-$icon-twitter:url(../images/Icon_sprites.png) -(10*$icon-sm) -192px no-repeat;
-$icon-twitter-hover:url(../images/Icon_sprites.png) -(11*$icon-sm) -192px no-repeat;
+$icon-instagram:url(../images/Icon_sprites.png) -($icon-margin+(8*($icon-sm+$icon-margin))) -224px no-repeat;
+$icon-instagram-hover:url(../images/Icon_sprites.png) -($icon-margin+(9*($icon-sm+$icon-margin))) -224px no-repeat;
+
+$icon-twitter:url(../images/Icon_sprites.png) -($icon-margin+(10*($icon-sm+$icon-margin))) -224px no-repeat;
+$icon-twitter-hover:url(../images/Icon_sprites.png) -($icon-margin+(11*($icon-sm+$icon-margin))) -224px no-repeat;
 
 
-$icon-superpowers-l:url(../images/Icon_sprites.png) -(2*$icon-l) 0 no-repeat;
-$icon-overons-l:url(../images/Icon_sprites.png) -(3*$icon-l) 0 no-repeat;
-$icon-account-l:url(../images/Icon_sprites.png) -(1*$icon-l) 0 no-repeat;
-$icon-qrcode-l:url(../images/Icon_sprites.png) -(8*$icon-l) 0 no-repeat;
+$icon-superpowers-l:url(../images/Icon_sprites.png) -($icon-margin+(2*($icon-l+$icon-margin))) 0 no-repeat;
+$icon-overons-l:url(../images/Icon_sprites.png) -($icon-margin+(3*($icon-l+$icon-margin))) 0 no-repeat;
+$icon-account-l:url(../images/Icon_sprites.png) -($icon-margin+(1*($icon-l+$icon-margin))) 0 no-repeat;
+$icon-qrcode-l:url(../images/Icon_sprites.png) -($icon-margin+(8*($icon-l+$icon-margin))) 0 no-repeat;
 
-$icon-superpowers-md:url(../images/Icon_sprites.png) -(2*$icon-md) -128px no-repeat;
-$icon-overons-md:url(../images/Icon_sprites.png) -(3*$icon-md) -128px no-repeat;
-$icon-account-md:url(../images/Icon_sprites.png) -(1*$icon-md) -128px no-repeat;
-$icon-qrcode-md:url(../images/Icon_sprites.png) -(13*$icon-md) -128px no-repeat;
+$icon-superpowers-md:url(../images/Icon_sprites.png) -($icon-margin+(2*($icon-md+$icon-margin))) -144px no-repeat;
+$icon-overons-md:url(../images/Icon_sprites.png) -($icon-margin+(3*($icon-md+$icon-margin))) -144px no-repeat;
+$icon-account-md:url(../images/Icon_sprites.png) -($icon-margin+(1*($icon-md+$icon-margin))) -144px no-repeat;
+$icon-qrcode-md:url(../images/Icon_sprites.png) -($icon-margin+(13*($icon-md+$icon-margin))) -144px no-repeat;
 
-$icon-superpowers-sm:url(../images/Icon_sprites.png) -(2*$icon-sm) -192px no-repeat;
-$icon-overons-sm:url(../images/Icon_sprites.png) -(3*$icon-sm) -192px no-repeat;
-$icon-account-sm:url(../images/Icon_sprites.png) -(1*$icon-sm) -192px no-repeat;
-$icon-qrcode-sm:url(../images/Icon_sprites.png) -(13*$icon-sm) -192px no-repeat;
+$icon-superpowers-sm:url(../images/Icon_sprites.png) -($icon-margin+(2*($icon-sm+$icon-margin))) -224px no-repeat;
+$icon-overons-sm:url(../images/Icon_sprites.png)  -($icon-margin+(3*($icon-sm+$icon-margin)))  -224px no-repeat;
+$icon-account-sm:url(../images/Icon_sprites.png)  -($icon-margin+(1*($icon-sm+$icon-margin)))  -224px no-repeat;
+$icon-qrcode-sm:url(../images/Icon_sprites.png)  -($icon-margin+(13*($icon-sm+$icon-margin)))  -224px no-repeat;
 
-$icon-superpowers-xs:url(../images/Icon_sprites.png) -(2*$icon-xs) -224px no-repeat;
-$icon-overons-xs:url(../images/Icon_sprites.png) -(3*$icon-xs) -224px no-repeat;
-$icon-account-xs:url(../images/Icon_sprites.png) -(1*$icon-xs) -224px no-repeat;
-$icon-qrcode-xs:url(../images/Icon_sprites.png) -(13*$icon-xs) -224px no-repeat;
+$icon-superpowers-xs:url(../images/Icon_sprites.png) -($icon-margin+(2*($icon-xs+$icon-margin)))  -272px no-repeat;
+$icon-overons-xs:url(../images/Icon_sprites.png) -($icon-margin+(3*($icon-xs+$icon-margin))) -272px no-repeat;
+$icon-account-xs:url(../images/Icon_sprites.png) -($icon-margin+(1*($icon-xs+$icon-margin)))-272px no-repeat;
+$icon-qrcode-xs:url(../images/Icon_sprites.png) -($icon-margin+(13*($icon-xs+$icon-margin))) -272px no-repeat;
 
-$icon-arrow-single-md:url(../images/Icon_sprites.png) -(14*$icon-md) -128px no-repeat;
-$icon-arrow-double-md:url(../images/Icon_sprites.png) -(15*$icon-md) -128px no-repeat;
-$icon-arrow-down-single-md:url(../images/Icon_sprites.png) -(16*$icon-md) -128px no-repeat;
-$icon-arrow-down-double-md:url(../images/Icon_sprites.png) -(17*$icon-md) -128px no-repeat;
+$icon-arrow-single-md:url(../images/Icon_sprites.png) -($icon-margin+(14*($icon-md+$icon-margin))) -144px no-repeat;
+$icon-arrow-double-md:url(../images/Icon_sprites.png) -($icon-margin+(15*($icon-md+$icon-margin))) -144px no-repeat;
+$icon-arrow-down-single-md:url(../images/Icon_sprites.png) -($icon-margin+(16*($icon-md+$icon-margin))) -144px no-repeat;
+$icon-arrow-down-double-md:url(../images/Icon_sprites.png) -($icon-margin+(17*($icon-md+$icon-margin))) -144px no-repeat;
 
-$icon-arrow-single-sm:url(../images/Icon_sprites.png) -(14*$icon-sm) -192px no-repeat;
-$icon-arrow-double-sm:url(../images/Icon_sprites.png) -(15*$icon-sm) -192px no-repeat;
-$icon-arrow-down-single-sm:url(../images/Icon_sprites.png) -(16*$icon-sm) -192px no-repeat;
-$icon-arrow-down-double-sm:url(../images/Icon_sprites.png) -(17*$icon-sm) -192px no-repeat;
+$icon-arrow-single-sm:url(../images/Icon_sprites.png) -($icon-margin+(14*($icon-sm+$icon-margin))) -224px no-repeat;
+$icon-arrow-double-sm:url(../images/Icon_sprites.png) -($icon-margin+(15*($icon-sm+$icon-margin))) -224px no-repeat;
+$icon-arrow-down-single-sm:url(../images/Icon_sprites.png) -($icon-margin+(16*($icon-sm+$icon-margin))) -224px no-repeat;
+$icon-arrow-down-double-sm:url(../images/Icon_sprites.png) -($icon-margin+(17*($icon-sm+$icon-margin))) -224px no-repeat;
 
-$icon-arrow-single-xs:url(../images/Icon_sprites.png) -(14*$icon-xs) -224px no-repeat;
-$icon-arrow-double-xs:url(../images/Icon_sprites.png) -(15*$icon-xs) -224px no-repeat;
-$icon-arrow-down-single-xs:url(../images/Icon_sprites.png) -(16*$icon-xs) -224px no-repeat;
-$icon-arrow-down-double-xs:url(../images/Icon_sprites.png) -(17*$icon-xs) -224px no-repeat;
+$icon-arrow-single-xs:url(../images/Icon_sprites.png) -($icon-margin+(14*($icon-xs+$icon-margin))) -272px no-repeat;
+$icon-arrow-double-xs:url(../images/Icon_sprites.png) -($icon-margin+(15*($icon-xs+$icon-margin))) -272px no-repeat;
+$icon-arrow-down-single-xs:url(../images/Icon_sprites.png) -($icon-margin+(16*($icon-xs+$icon-margin))) -272px no-repeat;
+$icon-arrow-down-double-xs:url(../images/Icon_sprites.png) -($icon-margin+(17*($icon-xs+$icon-margin))) -272px no-repeat;
 
-$icon-mega-missant:url(../images/Icon_sprites.png) -0px -192px no-repeat;
+$icon-mega-missant:url(../images/Icon_sprites.png) -$icon-margin -224px no-repeat;
+$icon-mega-missant-xs:url(../images/Icon_sprites.png) -$icon-margin -224px no-repeat;
 
-$icon-light01-l:url(../images/Icon_sprites.png) -(0*$icon-l) -240px no-repeat;
-$icon-light02-l:url(../images/Icon_sprites.png) -(1*$icon-l) -240px no-repeat;
-$icon-light03-l:url(../images/Icon_sprites.png) -(2*$icon-l) -240px no-repeat;
-$icon-light04-l:url(../images/Icon_sprites.png) -(3*$icon-l) -240px no-repeat;
-$icon-light05-l:url(../images/Icon_sprites.png) -(4*$icon-l) -240px no-repeat;
-$icon-light06-l:url(../images/Icon_sprites.png) -(5*$icon-l) -240px no-repeat;
-$icon-light07-l:url(../images/Icon_sprites.png) -(6*$icon-l) -240px no-repeat;
-$icon-light08-l:url(../images/Icon_sprites.png) -(7*$icon-l) -240px no-repeat;
+
+$icon-light01-l:url(../images/Icon_sprites.png) -($icon-margin+(0*($icon-l+$icon-margin))) -304px no-repeat;
+$icon-light02-l:url(../images/Icon_sprites.png) -($icon-margin+(1*($icon-l+$icon-margin))) -304px no-repeat;
+$icon-light03-l:url(../images/Icon_sprites.png) -($icon-margin+(2*($icon-l+$icon-margin))) -304px no-repeat;
+$icon-light04-l:url(../images/Icon_sprites.png) -($icon-margin+(3*($icon-l+$icon-margin))) -304px no-repeat;
+$icon-light05-l:url(../images/Icon_sprites.png) -($icon-margin+(4*($icon-l+$icon-margin))) -304px no-repeat;
+$icon-light06-l:url(../images/Icon_sprites.png) -($icon-margin+(5*($icon-l+$icon-margin))) -304px no-repeat;
+$icon-light07-l:url(../images/Icon_sprites.png) -($icon-margin+(6*($icon-l+$icon-margin))) -304px no-repeat;
+$icon-light08-l:url(../images/Icon_sprites.png) -($icon-margin+(7*($icon-l+$icon-margin))) -304px no-repeat;
 
 //
 // Color system
@@ -81,6 +86,9 @@ $purple: #46344E;
 $yellow: #FAED26;
 $black: #010A09;
 $white: #ffffff;
+
+$col-shinny-button: goldenrod;
+$corner-radius: 5px;
 
 // Fonts
 //
