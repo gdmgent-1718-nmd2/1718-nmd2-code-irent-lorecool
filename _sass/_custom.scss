@@ -206,7 +206,7 @@ input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3) {
 //              Step 1                     //
 //               Date                      //
 #dayCarouselControls,#hourCarouselControls,#minutesCarouselControls{
-  height: 15vh;
+  height: 20vh;
 }
 
 #dayCarouselControls .carousel-item p, #dayCarouselControls .carousel-item h3,
@@ -223,7 +223,7 @@ input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3) {
   padding: auto;
   top: 20px;
   position: relative;
-  left: -15px;
+  left: -10px;
 }
 #hourCarouselControls .carousel-item h3,
 #minutesCarouselControls .carousel-item h3{
@@ -234,7 +234,7 @@ input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3) {
   left: 6px;
 }
 #minutesCarouselControls .carousel-item p{
-  left:-5px;
+  left:-7px;
 }
 
 
@@ -378,12 +378,17 @@ nav#indicator {
 
 footer{
   background-color: $purple;
-  height: 250px;
+  height: 285px;
   margin-top: 30px;
   color: $white;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.3);
-
 }
+footer #copyright{
+position: absolute;
+margin-top: 10px;
+width: 70%;
+}
+
 .link-icon{
   margin-left:10%;
 }
@@ -655,6 +660,10 @@ a {
   -o-transform: skewX(-20deg);
   transform: skewX(-20deg);
 }
+.shinny.text{
+  font-family: $Oswald;
+  font-weight: $Oswald-regular;
+}
 
 @-webkit-keyframes shine {
   from {
@@ -762,7 +771,12 @@ font-size: 12px;
 
 .shift-left{
   padding-left:70px;
+  height:58vh;
+  margin-bottom: 5px;
+  position: relative;
+  padding-top:10px;
 }
+
 
 h1,h2,h3,h4{
   font-family: $Oswald;
@@ -792,11 +806,21 @@ img{
 .color-section01{
   background-color: $green;
   color:white;
+
+
 }
 .color-section02{
   background-color: $purple;
   color:white;
+
+
 }
+
+.about_title{
+ padding-top: 60px;
+ padding-bottom: 20px;
+}
+
 .text-warning{
   font-size: 12px;
   line-height:16px;
@@ -839,26 +863,74 @@ nav.navbar{
   height: $icon-sm;
 }
 
+.center-arrow{
+  position: absolute;
+  margin:auto;
+  bottom: 5px;
+  width: 40%;
+  margin-bottom: 20px;
+  padding-top:200px;
+  height: 15px;
+
+}
+
 img.arrow{
   background: $icon-arrow-down-single-sm;
   width: $icon-sm;
   height: $icon-sm;
+  top:40px;
 
  }
+
  img.arrow:hover{
    background: $icon-arrow-down-double-sm;
- }
+  }
 
  img.arrow-up{
   background: $icon-arrow-single-sm;
   width: $icon-sm;
   height: $icon-sm;
+  top:40px;
+
  // transition: background-image 2s ease-in-out;
 
  }
  img.arrow-up:hover{
    background: $icon-arrow-double-sm;
  }
+
+
+ .about_img{
+  width: $icon-l;
+  height: $icon-l;
+}
+.about_img#over_ons{
+  background: url(../images/Missant_rechtstaand_uitleg-2.jpg);
+  background-size: 100%;
+
+}
+.about_img#afwezig{
+  background: url(../images/Missant_vind-2.jpg);
+  background-size: 100%;
+
+}
+
+.about_img.shine{
+  top: 75px;
+}
+.about_img#credit_gold{
+  background: $icon-credit-gold-l;
+
+}
+
+.about_img#credit_silver{
+  background: $icon-credit-silver-l;
+  width: $icon-md;
+  height: $icon-md;
+}
+.about_img#credit_silver.shine{
+  top: 40px;
+}
 
 //------------------------------------------//
 //              media queries                     //

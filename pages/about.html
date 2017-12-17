@@ -14,7 +14,8 @@ sections:
     section_text: |
         Wij zijn het organiserend team achter de reddingsacties van Mega Missant. 
         Wij zorgen ervoor dat Mega Missant op het juiste moment bij jou verschijnt.
-    section_src: http://via.placeholder.com/150x150 
+    section_src: assets/images/trans.png
+    section_img_id: over_ons
     section_order: 1
   -
     section_title: Credits
@@ -22,7 +23,9 @@ sections:
         Credits kan je verdienen door naar de lessen te komen. 
         Op het einde van de les kan je de QR-code scannen waardoor de credits automatisch aan jou worden toegekend. 
         Deze kan je inruilen voor een reddingsactie van Mega Missant.
-    section_src: http://via.placeholder.com/150x150 
+    section_src: assets/images/trans.png
+    section_img_id: credit_gold
+    section_img_class: shine
     section_order: 2
   -
     section_title: Credits ontvangen
@@ -30,7 +33,9 @@ sections:
         1.	Je gaat naar je accountpagina.
         2.	Scan de QR-code
         Per lestijd van 1,5uur krijg je 1 credit.
-    section_src: http://via.placeholder.com/150x150         
+    section_src: assets/images/trans.png
+    section_img_id: credit_silver
+    section_img_class: shine         
     section_order: 3
   -
     section_title: Credits inwisselen
@@ -38,27 +43,31 @@ sections:
         Wanneer je een reddingsactie hebt gepland, worden de credits automatisch van jouw saldo afgehaald. 
         Per kwartier dat je Mega Missant om hulp vraagt, betaal je 1 credit. 
         Elke reddingsactie bedraagt minimaal een kwartier en maximaal 45 min.
-    section_src: http://via.placeholder.com/150x150         
+    section_src: assets/images/trans.png
+    section_img_id: credit_gold        
     section_order: 4
   -
     section_title: Credits terugkrijgen
     section_text: |
         Als je reddingsactie minder lang is dan gepland, kan je van Mega Missant credits terugkrijgen door een QR-code te scannen. 
         Er wordt telkens afgerond op een kwartier.
-    section_src: http://via.placeholder.com/150x150         
+    section_src: assets/images/trans.png
+    section_img_id: credit_silver      
     section_order: 5
   -
     section_title: Afwezigheid Mega Missant
     section_text: |
         Als Mega Missant jou niet kan komen redden wanneer afgesproken, krijg je de opgenomen credits automatisch terug.
-    section_src: http://via.placeholder.com/150x150         
+    section_src: assets/images/trans.png
+    section_img_id: afwezig       
     section_order: 6
   -
     section_title: Credits verliezen
     section_text: |
         Laat Mega Missant minimaal 2 uur op voorhand weten als je niet naar zijn reddingsactie kan komen. 
         Indien je zelf niet aanwezig ben, verlies je alle opgenomen credits.
-    section_src: http://via.placeholder.com/150x150         
+    section_src: assets/images/trans.png
+    section_img_id: credit_gold     
     section_order: 7
 ---
 {% assign sections = page.sections | sort: 'section_order' %}
@@ -66,10 +75,10 @@ sections:
     {%- for section in sections %}
             {% assign value = section.section_order | modulo:2 %}
             {% if value == 1 %}
-            <div class="color-section01" id="deel0{{ id_counter}}">
+            <div class="color-section01  about_title" id="deel0{{ id_counter}}">
                 <div class="container shift-left">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 ">
                             <h3>{{ section.section_title }}</h3>
                         </div>
                     </div>
@@ -78,15 +87,16 @@ sections:
                             <p>{{ section.section_text}}</p>
                         </div>
                         <div class="col-12 col-md-5 offset-md-2 order-1 order-md-2">
-                            <img src="{{ section.section_src }}" alt="illustration">
-                        </div>
+                                <img class="about_img {{ section.section_img_class }}" id="{{ section.section_img_id }}" src="{{ section.section_src }}" alt="{{ section.section_img_id }}">
+                            </div>
                     </div>
                 <br>
-                <div class="row justify-content-center">
+                <div class="col-11 center-arrow ">
+                <div class="row justify-content-center ">
                     <div class="col-1">
                         {%- if id_counter == 7 %}
                         <a href="#deel01">
-                                <img class="arrow-up shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                    
+                                <img class="arrow-up shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go up">
                             </a>
                         {%- else %}
                         <a href="#deel0{{ id_counter | plus:1 }}">
@@ -95,39 +105,43 @@ sections:
                         {%- endif %}
                     </div>
                 </div>
+                
                 </div>
             </div>
+            </div>
             {% else %}
-            <div class="color-section02" id="deel0{{ id_counter}}">
+            <div class="color-section02  about_title" id="deel0{{ id_counter}}">
                 <div class="container shift-left">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 ">
                             <h3>{{ section.section_title }}</h3>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-5 order-1 order-md-1">
-                            <img src="{{ section.section_src }}" alt="illustration">
-                        </div>    
+                                <img class="about_img {{ section.section_img_class }}" id="{{ section.section_img_id }}" src="{{ section.section_src }}" alt="{{ section.section_img_id }}">
+                            </div>    
                         <div class="col-12 col-md-7 col-md-5 order-2 order-md-2">
                             <p>{{ section.section_text}}</p>
                         </div>
                     </div>
                 <br>
-                <div class="row justify-content-center">
+                <div class="col-11 center-arrow">
+                        <div class="row justify-content-center">
                         <div class="col-1">
                                 {%- if id_counter == 7 %}
-                                <a href="#deel1">
-                                        <img src="">ddd
+                                <a href="#deel01">
+                                        <img class="arrow-up shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go up">
                                     </a>
                                 {%- else %}
                                 <a href="#deel0{{ id_counter | plus:1 }}">
-                                     <img class="arrow shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                    
+                                        <img class="arrow shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                    
                                     </a>
                                 {%- endif %}
-                        </div>
+                            </div>
                     </div>
                 </div>
+            </div>
             </div>
             {% endif %}
     {%- assign id_counter = id_counter | plus:1 %}

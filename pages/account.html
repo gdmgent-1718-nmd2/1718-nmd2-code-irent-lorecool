@@ -46,13 +46,54 @@ nav_icon: ac
                                 <div id="menu w-100">
                                     <div class="panel list-group">
                                         <div class="list-group-item title"><h4>gereserveerde momenten</h4></div>
-                                         <a href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#sm" data-parent="#menu">17 December 2017</a>
+                                         <a href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#sm" data-parent="#menu">
+                                            <div class="row">
+                                            <div class="col-6">
+                                            17 December 2017
+                                             </div>
+                                             <div class="col-2 offset-3">
+                                                    <img class="arrow" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                                                                        
+                                            </div>
+                                            </div>
+                                            </a>
                                          <div id="sm" class="sublinks collapse">
-                                          <a class="list-group-item"> info over gereserveerde moment</a>
+                                          <div class="list-group-item"> 
+                                                <div class="row">
+                                                        <div class="col-12">
+                                                          <ul>
+                                                            <li> 17 December 2017</li>
+                                                            <li> Om 14u </li>
+                                                            <li> Voor 15 minuten </li>
+                                                          </ul>
+                                                          
+                                                        </div>
+                                                      </div>
+                                                      <div class="row justify-content-center">
+                                                          <div class="col-10 col-md-4">
+                                                              <img id="qrcode-img" src="{{ 'assets/images/qrcode.jpg' | relative_url }}" alt="qrcode">
+                                                          </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <form method="get" action="{{'assets/images/qrcode.jpg' | relative_url }}">
+                                                                <button type="submit" class="btn btn-primary shinny">Download QR-code</a>                                                        
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                          </div>
-                                         <a href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#sl" data-parent="#menu">20 December 2017</a>
+                                         <a href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#sl" data-parent="#menu">
+                                                <div class="row">
+                                                        <div class="col-6">
+                                                        20 December 2017
+                                                         </div>
+                                                         <div class="col-2 offset-3">
+                                                                <img class="arrow" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                                                                        
+                                                        </div>
+                                                        </div>
+                                         </a>
                                          <div id="sl" class="sublinks collapse">
-                                          <a class="list-group-item"> Info over gereserveerd moment </a>
+                                          <div class="list-group-item"> Info over gereserveerd moment </div>
                                          </div>
                                     </div>
                                 </div>

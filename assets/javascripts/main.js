@@ -1,22 +1,3 @@
-//script for scroll indicator
-/*function progress(scroll_top) {
-    var el = document.getElementById("line_red");
-    var max = document.getElementById("line").offsetHeight;
-    var docHeight = $(document).height();
-    var winHeight = $(window).height();
-    var height = el.offsetHeight;
-    var newHeight = (((scroll_top+winHeight)/docHeight)*max)-8;
-    el.style.height = newHeight + 'px';
-}
-var interval = 50;
-var timer = window.setInterval(function(){
-  var scroll_top = $(document).scrollTop();
-progress(scroll_top);
-if (yourCodeHasBeenExecuted === true) {
-  window.clearInterval(timer);
-}
-}, interval);*/
-
 //carousel script
 $('.carousel-sync').on('slide.bs.carousel', function(ev) {
 	var dir = ev.direction == 'right' ? 'prev' : 'next';
