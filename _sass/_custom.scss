@@ -948,7 +948,7 @@ img.arrow{
   
   input#checkqr{
    top:0;
-   left: -10%;
+   left: -5%;
     } 
     .qrcode-text-btn{
       top:0;
@@ -980,15 +980,22 @@ img.arrow{
 
   #dayCarouselControls .carousel-item p{
     padding: auto;
-    top: 0px;
+    top: 60px;
     position: relative;
-    left: 180px;
+    left: 110px;
   }
-  #hourCarouselControls .carousel-item p, #minutesCarouselControls .carousel-item p{
+  #hourCarouselControls .carousel-item p{
     padding: auto;
     top: 0px;
     position: relative;
-    left: 260px;
+    left: 255px;
+  }
+
+  #minutesCarouselControls .carousel-item p{
+    padding: auto;
+    top: 0px;
+    position: relative;
+    left: 225px;
   }
   
   .carousell-wrapper ol.carousel-indicators{
