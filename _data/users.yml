@@ -1,0 +1,22 @@
+  - first_name: Lorenzo
+    last_name: Coole
+    class: 2cmo
+    enrollment: 2016
+    profile_picture: assets/images/trans.png
+    credits_totaal: 100
+    credits_gespendeerd: 50
+    gereserveerde_momenten_totaal: 10
+    gereserveerde_momenten_actief: 2
+    gereserveerde_momenten:
+      - id: 1
+        dag: 17
+        maand: December
+        jaar: 2017
+        uur: 14u
+        duur: 30 min
+      - id: 2
+        dag: 21
+        maand: December
+        jaar: 2017
+        uur: 15u
+        duur: 15 min

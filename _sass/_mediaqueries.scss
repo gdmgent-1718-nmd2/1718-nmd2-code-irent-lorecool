@@ -1,0 +1,151 @@
+//------------------------------------------//
+//              media queries               //
+//------------------------------------------//
+@media (max-width: 768px) {
+    //          navbar background             //
+    nav.navbar {
+      background: rgba(0,0,0,0.9)!important;
+    }
+    
+  }
+  
+  @media (min-width: 576px) {
+    //          homepage            //
+    .centered{
+      margin: auto;
+      }
+    //          navbar              //
+    nav.navbar {
+      background: rgba(0,0,0,0.9)!important;
+    }
+    //          Qr-code             //
+    input#checkqr{
+     top:0;
+     left: -5%;
+      } 
+      .qrcode-text-btn{
+        top:0;
+        left:-10%;
+      }
+      .viewport-100{
+        height: 70vh;
+      }
+    
+    }
+  @media (min-width: 768px) {
+    //          reservatie carousel            //
+    #dayCarouselControls,#hourCarouselControls, #minutesCarouselControls{
+      height: 20vh;
+    }
+  
+    #dayCarouselControls .carousel-item p, #dayCarouselControls .carousel-item h3,
+    #hourCarouselControls .carousel-item p, #hourCarouselControls .carousel-item h3,
+    #minutesCarouselControls .carousel-item p, #minutesCarouselControls .carousel-item h3{
+      margin: 6px 30px;
+      padding: auto;
+      top: 10px;
+      position: relative;
+      left: 280px;
+      font-size: 2.5em;
+    }
+    #hourCarouselControls .carousel-item h3,#minutesCarouselControls .carousel-item h3{
+      left: 270px;
+    }
+  
+    #dayCarouselControls .carousel-item p{
+      padding: auto;
+      top: 60px;
+      position: relative;
+      left: 110px;
+    }
+    #hourCarouselControls .carousel-item p{
+      padding: auto;
+      top: 0px;
+      position: relative;
+      left: 255px;
+    }
+  
+    #minutesCarouselControls .carousel-item p{
+      padding: auto;
+      top: 0px;
+      position: relative;
+      left: 225px;
+    }
+    
+    .carousell-wrapper ol.carousel-indicators{
+      bottom: 0;
+    }
+  
+    .carousell-wrapper, .carousel-inner, .carousel-inner img{
+      height: 70vh;
+  }
+  //          navbar            //
+    nav#indicator {
+      z-index:5;
+      position: fixed;
+      width:30px;
+      top:30%;
+      left:0;
+      }
+  //          footer            //
+    footer .menu {
+      bottom: 50px;
+      right: 70px;
+      top:-50px;
+     }
+  
+     .menu-item, .menu-open-button {
+        width: 64px;
+         height: 64px;
+         }
+      .menu label{
+        line-height: 60px!important;
+        top:10px;
+        left: 20px;
+      }
+  //          icoontjes            //
+    .link-icon{
+      margin-left:33%;
+    }
+    .link-icon #icon-superpowers{
+      background: $icon-superpowers-l;
+      width: $icon-l;
+    }
+    
+    .link-icon #icon-account{
+      background: $icon-account-l;
+      width: $icon-l;
+    }
+    
+    .link-icon #icon-overons{
+      background: $icon-overons-l;
+      width: $icon-l;
+    }
+  
+    img.arrow{
+      background: $icon-arrow-down-single-md;
+      width: $icon-md;
+      height: $icon-md;
+    
+     }
+     img.arrow:hover{
+       background: $icon-arrow-down-double-md;
+     }
+    
+     img.arrow-up{
+      background: $icon-arrow-single-md;
+      width: $icon-md;
+      height: $icon-md;
+     // transition: background-image 2s ease-in-out;
+    
+     }
+     img.arrow-up:hover{
+       background: $icon-arrow-double-md;
+     }
+  }
+  @media (min-width: 992px) {
+    .container {
+     } }
+  @media (min-width: 1200px) {
+    .container {
+     } }

@@ -7,7 +7,10 @@ nav_title: Account
 nav_order: 30
 nav_icon: ac
 ---
-
+{%- assign users = site.data.users %}
+{%- for user in users %}
+{%- assign u = user %}
+{%- endfor %}
 <div class="container">
         <div class="row">
             <div class="col-12">
@@ -15,11 +18,15 @@ nav_icon: ac
                     <div class="card-body">
                         <h4 class="card-title">Account</h4>
                         <div class="row">
-                            <div class="col-4">
-                                <p>foto</p>
+                            <div class="col-3 col-md-4">
+                                <img class="profielfoto" src="{{ u.profile_picture }}" alt="profielfoto">
                             </div>
-                            <div class="col-8">
-                                acountinformatie
+                            <div class="col-12 col-md-8">
+                                <ul class="account">
+                                <li><b>Naam:</b> {{ u.last_name }} {{ u.first_name }}</li>
+                                <li><b>klas:</b> {{ u.class }}</li>
+                                <li><b>ingeschreven sinds:</b> {{ u.enrollment }}</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="row">
@@ -28,11 +35,11 @@ nav_icon: ac
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6">
-                                <ul>
-                                    <li>verzameld</li>
-                                    <li>uitgegeven</li>
-                                    <li>saldo</li>
+                            <div class="col-8">
+                                <ul class="account">
+                                    <li><b>verzameld:</b> {{ u.credits_totaal }}</li>
+                                    <li><b>uitgegeven:</b> {{ u.credits_gespendeerd }}</li>
+                                    <li><b>saldo:</b> {{ u.credits_totaal | minus:u.credits_gespendeerd }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -46,24 +53,25 @@ nav_icon: ac
                                 <div id="menu w-100">
                                     <div class="panel list-group">
                                         <div class="list-group-item title"><h4>gereserveerde momenten</h4></div>
-                                         <a href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#sm" data-parent="#menu">
+                                        {%- for moment in u.gereserveerde_momenten %}
+                                         <div href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#{{ moment.id }}" data-parent="#menu">
                                             <div class="row">
                                             <div class="col-6">
-                                            17 December 2017
+                                            {{ moment.dag }} {{ moment.maand }} {{ moment.jaar }}
                                              </div>
                                              <div class="col-2 offset-3">
                                                     <img class="arrow" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                                                                        
                                             </div>
                                             </div>
-                                            </a>
-                                         <div id="sm" class="sublinks collapse">
+                                        </div>
+                                         <div id="{{ moment.id }}" class="sublinks collapse">
                                           <div class="list-group-item"> 
                                                 <div class="row">
                                                         <div class="col-12">
                                                           <ul>
-                                                            <li> 17 December 2017</li>
-                                                            <li> Om 14u </li>
-                                                            <li> Voor 15 minuten </li>
+                                                            <li> {{ moment.dag }} {{ moment.maand }} {{ moment.jaar }}</li>
+                                                            <li> {{ moment.uur }} </li>
+                                                            <li> {{ moment.duur }}  </li>
                                                           </ul>
                                                           
                                                         </div>
@@ -76,25 +84,15 @@ nav_icon: ac
                                                     <div class="row">
                                                         <div class="col-4">
                                                             <form method="get" action="{{'assets/images/qrcode.jpg' | relative_url }}">
-                                                                <button type="submit" class="btn btn-primary shinny">Download QR-code</a>                                                        
+                                                                <button type="submit" class="btn btn-primary shinny">Download QR-code</button>                                                        
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                          </div>
-                                         <a href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#sl" data-parent="#menu">
-                                                <div class="row">
-                                                        <div class="col-6">
-                                                        20 December 2017
-                                                         </div>
-                                                         <div class="col-2 offset-3">
-                                                                <img class="arrow" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                                                                        
-                                                        </div>
-                                                        </div>
-                                         </a>
-                                         <div id="sl" class="sublinks collapse">
-                                          <div class="list-group-item"> Info over gereserveerd moment </div>
-                                         </div>
+                                         {%- endfor %}
+                                         <div class="list-group-item title"><p><b>aantal actieve reddingsacties:</b> {{ u.gereserveerde_momenten_actief }}</p>
+                                         <p><b>totaal aantal reddingsacties die je al gepland hebt:</b> {{ u.gereserveerde_momenten_totaal }}</p></div>
                                     </div>
                                 </div>
                             </div>

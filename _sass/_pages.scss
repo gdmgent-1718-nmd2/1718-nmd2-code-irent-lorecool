@@ -1,0 +1,383 @@
+//------------------------------------------//
+//              detail pag                  //
+//------------------------------------------//
+.detail-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 10px solid $purple;
+    border: 10px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.4);
+  }
+  .container-fluid.no-padding{
+    padding-left:0;
+    padding-right:0;
+    overflow-x: hidden;
+    margin-top:40px;
+  
+  }
+  
+  .detail-content {
+    //background: #7d7f72 url("https://i.imgur.com/wO5gzQp.png") repeat scroll 0 0;
+    background: $green;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .detail-bg {
+    //background: url("https://i.imgur.com/L6XmtEs.png") repeat-x scroll 0 0;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .detail-content-inner {
+    position: relative;
+    left: -20px;
+    width: 100%;
+    list-style: none;
+    transition: left ease-in 0.8s;
+    color: white;
+    text-shadow: 0px 2px 3px #555;
+  }
+
+//              Carousel                    //
+
+.carousell-wrapper{
+    width:100%;
+    overflow-x: hidden;
+    height:auto;
+    overflow-y: hidden;
+    }
+    
+    .carousell-container{
+        position: relative;
+        width: 180%;
+        left: -40%;
+    }
+    
+    .carousell-wrapper, .carousel-inner, .carousel-inner img{
+        height: 30vh;
+    }
+  
+    .carousell-wrapper ol.carousel-indicators{
+      bottom: -5%;
+    }
+  
+  .carousell-wrapper ol.carousel-indicators li{
+    background: $icon-mega-missant;
+    width: $icon-sm;
+    height: $icon-sm;
+  }
+  .carousell-wrapper ol.carousel-indicators li.active{
+    filter: brightness(1.1);
+    transform: scale(1.5);
+  }
+  
+//------------------------------------------//
+//              Parallax                    //
+//------------------------------------------//
+
+/*Opmaak van slideshow*/
+.sp-slideshow {
+    position: relative;
+    margin: 10px auto;
+    width: 100%;
+    height: auto;
+    border: 10px solid #ddd;
+    border: 10px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+  /*opmaak en verbergen van content*/
+  .sp-content {
+    background: #7d7f72 url("https://i.imgur.com/wO5gzQp.png") repeat scroll 0 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  /*opmaak en instellen van achtergrond*/
+  .sp-parallax-bg {
+    background: url("https://i.imgur.com/L6XmtEs.png") repeat-x scroll 0 0;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  /*opmaak en verbergen van radio buttons*/
+  .sp-slideshow input {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    z-index: 1001;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  /*animatie*/
+  .sp-slideshow input:checked ~ .sp-content {
+    transition: background-position linear 0.6s, background-color linear 0.8s;
+  }
+  
+  .sp-slideshow input:checked ~ .sp-content .sp-parallax-bg {
+    transition: background-position linear 0.7s;
+  }
+  
+  /*verschuiving van de achtergrond kleurfilter*/
+  
+  
+  input.sp-selector-2:checked ~ .sp-content {
+    background-position: -100% 0;
+    background-color: #7f7276;
+  }
+  
+  input.sp-selector-3:checked ~ .sp-content {
+    background-position: -200% 0;
+    background-color: #737f72;
+  }
+  
+  /*verschuiving van de achtergrond*/
+  input.sp-selector-1:checked ~ .sp-content .sp-parallax-bg {
+    background-position: 0 0;
+  }
+  
+  input.sp-selector-2:checked ~ .sp-content .sp-parallax-bg {
+    background-position: 200px 0;
+  }
+  
+  input.sp-selector-3:checked ~ .sp-content .sp-parallax-bg {
+    background-position: 400px 0;
+  }
+  
+  /*lange strook met alle content die verschuift en telkens een deel van de content toont*/
+  .sp-slider {
+    position: relative;
+    left: 0;
+    width: 300%;
+    list-style: none;
+    transition: left ease-in 0.8s;
+    color: $white;
+    text-shadow: 0px 2px 3px #555;
+  }
+  /*content li*/
+  .sp-slider > li {
+    color: $white;
+    box-sizing: border-box;
+    height: 100%;
+    opacity: 0.4;
+    transition: opacity ease-in 0.4s 0.8s;
+  }
+  .sp-slider li h2{
+    font-size: 18px;
+  }
+  
+  /*verschuiven content*/
+  input.sp-selector-1:checked ~ .sp-content .sp-slider {
+    left: 5%;
+  }
+  
+  input.sp-selector-2:checked ~ .sp-content .sp-slider {
+    left: -145%;
+  }
+  
+  input.sp-selector-3:checked ~ .sp-content .sp-slider {
+    left: -195%;
+  }
+  
+  input.sp-selector-1:checked ~ .sp-content .sp-slider > li:first-child,
+  input.sp-selector-2:checked ~ .sp-content .sp-slider > li:nth-child(2),
+  input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3) {
+    opacity: 1;
+  }
+  
+  //              Step 1                     //
+  //               Date                      //
+  #dayCarouselControls,#hourCarouselControls,#minutesCarouselControls{
+    height: 20vh;
+  }
+  
+  #dayCarouselControls .carousel-item p, #dayCarouselControls .carousel-item h3,
+  #hourCarouselControls .carousel-item p, #hourCarouselControls .carousel-item h3,
+  #minutesCarouselControls .carousel-item p, #minutesCarouselControls .carousel-item h3{
+    margin: 6px 30px;
+    padding: auto;
+    top: 15px;
+    position: relative;
+    left: 20px;
+  }
+  #dayCarouselControls .carousel-item p,
+  {
+    padding: auto;
+    top: 20px;
+    position: relative;
+    left: -10px;
+  }
+  #hourCarouselControls .carousel-item h3,
+  #minutesCarouselControls .carousel-item h3{
+    left: 5px;
+  }
+  #hourCarouselControls .carousel-item p,
+  {
+    left: 6px;
+  }
+  #minutesCarouselControls .carousel-item p{
+    left:-7px;
+  }
+  
+  //              Step 2                     //
+  #qrcode-img{
+    width:50%;
+  }
+  
+  //------------------------------------------//
+//          Qr code scanner                 //
+//------------------------------------------//
+
+input {
+    font-size:14pt;
+  }
+  
+  input, label {
+    vertical-align:middle;
+  }
+  label{
+    margin-bottom: 0;
+  }
+  .qrcode-text {
+    padding-right:1.7em; 
+    margin-right:0;
+  }
+  
+  .qrcode-text-btn {
+    display:inline-block; 
+    background:url('//dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg') 50% 50% no-repeat;
+    height:1em; 
+    width:1.7em; 
+    cursor:pointer;
+    position: relative;
+    top: -30px;
+    left: 160px;
+  }
+  
+  .qrcode-text-btn > input[type=file] {
+    position:absolute; 
+    overflow:hidden; 
+    width:1px; 
+    height:1px; 
+    opacity:0;
+  }
+  input#checkqr{
+    position: relative;
+    top: -55px;
+    left: 190px;
+  }
+  
+  #qrscanner{
+    position: relative;
+    margin-top:50px;
+  }
+  
+  #qrcode-img{
+  margin: 5px;
+  }
+
+  //------------------------------------------//
+//              reservatie                  //
+//------------------------------------------//
+.panel.list-group{
+    margin-top:50px;
+  }
+  
+  .panel.list-group .title{
+    background-color: rgb(54, 54, 54);
+    color:$white;
+  }
+  
+  .panel.list-group .subtitle{
+    background-color: lightgrey;
+  }
+  //------------------------------------------//
+  //                 about                    //
+  //------------------------------------------//
+  
+  .color-section01{
+    background-color: $green;
+    color:white;
+  
+  }
+  
+  .color-section02{
+    background-color: $purple;
+    color:white;
+  }
+  
+  .about_title{
+    padding-top: 60px;
+    padding-bottom: 20px;
+   }
+  
+   .about_img{
+    width: $icon-l;
+    height: $icon-l;
+  }
+  .about_img#over_ons{
+    background: url(../images/Missant_rechtstaand_uitleg-2.jpg);
+    background-size: 100%;
+  
+  }
+  .about_img#afwezig{
+    background: url(../images/Missant_vind-2.jpg);
+    background-size: 100%;
+  
+  }
+  
+  .about_img.shine{
+    top: 75px;
+  }
+  .about_img#credit_gold{
+    background: $icon-credit-gold-l;
+  
+  }
+  
+  .about_img#credit_silver{
+    background: $icon-credit-silver-l;
+    width: $icon-md;
+    height: $icon-md;
+  }
+  .about_img#credit_silver.shine{
+    top: 40px;
+  }
+  
+  .center-arrow{
+    position: absolute;
+    margin:auto;
+    bottom: 5px;
+    width: 40%;
+    margin-bottom: 20px;
+    padding-top:200px;
+    height: 15px;
+  
+  }
+
+//------------------------------------------//
+//              Account                     //
+//------------------------------------------//
+
+ul.account{
+    list-style: none;
+    position: relative;
+    left: -40px;
+  }
+  
+  .card-text{
+    margin-bottom: 15px;
+  }

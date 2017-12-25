@@ -73,8 +73,8 @@ sections:
 {% assign sections = page.sections | sort: 'section_order' %}
 {%- assign id_counter = 1 %}
     {%- for section in sections %}
-            {% assign value = section.section_order | modulo:2 %}
-            {% if value == 1 %}
+            {%- assign value = section.section_order | modulo:2 %}
+            {%- if value == 1 %}
             <div class="color-section01  about_title" id="deel0{{ id_counter}}">
                 <div class="container shift-left">
                     <div class="row">
