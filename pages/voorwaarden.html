@@ -90,29 +90,20 @@ verhuurvoorwaarden:
 ---
 
 <div class="container  tekst-wit">
-    <div class="row">
-        <div class="col-12 col-md-9 col-lg-8">
-            <h3>{{ page.nav_title }}</h3>
-            <ul>
-                {%- assign positions = page.verhuurvoorwaarden | size %}
-                {%- assign value = 0 %}
-                {%- assign count = 0 %}
-                {%- assign positions = positions | divided_by: 3 %}
-                {%- for item in page.verhuurvoorwaarden %}
-                    {%- assign temp = positions | times: count %}
-                    {%- if value == temp %}
-                        {%- assign count = count | plus: 1 %}
-                        {%- if count >= 10 %}
-                        <li id="deel{{ count }}">{{ item.text }}</li>
-                        {%- else %}
-                        <li id="deel0{{ count }}">{{ item.text }}</li>
-                        {%- endif %}
-                    {%- else %}
-                        <li>{{ item.text }}</li>
-                    {%- endif %}
-                    {%- assign value = value | plus: 1 %}
-                {%- endfor %}
-            </ul>
-        </div>
+  <div class="row">
+    <div class="col-12 col-md-9 col-lg-8">
+      <h3>{{ page.nav_title }}</h3>
+      <ul>
+        {%- assign positions = page.verhuurvoorwaarden | size %} {%- assign value = 0 %} {%- assign count = 0 %} {%- assign positions
+        = positions | divided_by: 3 %} {%- for item in page.verhuurvoorwaarden %} {%- assign temp = positions | times: count
+        %} {%- if value == temp %} {%- assign count = count | plus: 1 %} {%- if count >= 10 %}
+        <li id="deel{{ count }}">{{ item.text }}</li>
+        {%- else %}
+        <li id="deel0{{ count }}">{{ item.text }}</li>
+        {%- endif %} {%- else %}
+        <li>{{ item.text }}</li>
+        {%- endif %} {%- assign value = value | plus: 1 %} {%- endfor %}
+      </ul>
     </div>
+  </div>
 </div>

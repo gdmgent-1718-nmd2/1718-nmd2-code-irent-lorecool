@@ -7,92 +7,102 @@ nav_title: Account
 nav_order: 30
 nav_icon: ac
 ---
-{%- assign users = site.data.users %}
-{%- for user in users %}
-{%- assign u = user %}
-{%- endfor %}
+
+{%- assign users = site.data.users %} {%- for user in users %} {%- assign u = user %} {%- endfor %}
 <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Account</h4>
-                        <div class="row">
-                            <div class="col-3 col-md-4">
-                                <img class="profielfoto" src="{{ u.profile_picture }}" alt="profielfoto">
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <ul class="account">
-                                <li><b>Naam:</b> {{ u.last_name }} {{ u.first_name }}</li>
-                                <li><b>klas:</b> {{ u.class }}</li>
-                                <li><b>ingeschreven sinds:</b> {{ u.enrollment }}</li>
-                                </ul>
-                            </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Account</h4>
+                    <div class="row">
+                        <div class="col-3 col-md-4">
+                            <img class="profielfoto" src="{{ u.profile_picture }}" alt="profielfoto">
                         </div>
-                        <div class="row">
-                            <div class="col-12">
+                        <div class="col-12 col-md-8">
+                            <ul class="account">
+                                <li>
+                                    <b>Naam:</b> {{ u.last_name }} {{ u.first_name }}</li>
+                                <li>
+                                    <b>klas:</b> {{ u.class }}</li>
+                                <li>
+                                    <b>ingeschreven sinds:</b> {{ u.enrollment }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
                             <h4 class="card-title">Credits</h4>
-                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-8">
-                                <ul class="account">
-                                    <li><b>verzameld:</b> {{ u.credits_totaal }}</li>
-                                    <li><b>uitgegeven:</b> {{ u.credits_gespendeerd }}</li>
-                                    <li><b>saldo:</b> {{ u.credits_totaal | minus:u.credits_gespendeerd }}</li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <ul class="account">
+                                <li>
+                                    <b>verzameld:</b> {{ u.credits_totaal }}</li>
+                                <li>
+                                    <b>uitgegeven:</b> {{ u.credits_gespendeerd }}</li>
+                                <li>
+                                    <b>saldo:</b> {{ u.credits_totaal | minus:u.credits_gespendeerd }}</li>
+                            </ul>
                         </div>
-                        <div class="row">
-                            <div class="col-4 justify-content-center">
-                                <a href="{{'scanqr.html' | relative_url }}" class="btn btn-primary shinny">scan QR Code</a>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 justify-content-center">
+                            <a href="{{'scanqr.html' | relative_url }}" class="btn btn-primary shinny">scan QR Code</a>
                         </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div id="menu w-100">
-                                    <div class="panel list-group">
-                                        <div class="list-group-item title"><h4>gereserveerde momenten</h4></div>
-                                        {%- for moment in u.gereserveerde_momenten %}
-                                         <div href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#{{ moment.id }}" data-parent="#menu">
-                                            <div class="row">
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="menu w-100">
+                                <div class="panel list-group">
+                                    <div class="list-group-item title">
+                                        <h4>gereserveerde momenten</h4>
+                                    </div>
+                                    {%- for moment in u.gereserveerde_momenten %}
+                                    <div href="#" class="list-group-item subtitle" data-toggle="collapse" data-target="#{{ moment.id }}" data-parent="#menu">
+                                        <div class="row">
                                             <div class="col-6">
-                                            {{ moment.dag }} {{ moment.maand }} {{ moment.jaar }}
-                                             </div>
-                                             <div class="col-2 offset-3">
-                                                    <img class="arrow" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                                                                        
+                                                {{ moment.dag }} {{ moment.maand }} {{ moment.jaar }}
                                             </div>
+                                            <div class="col-2 offset-3">
+                                                <img class="arrow" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">
                                             </div>
                                         </div>
-                                         <div id="{{ moment.id }}" class="sublinks collapse">
-                                          <div class="list-group-item"> 
-                                                <div class="row">
-                                                        <div class="col-12">
-                                                          <ul>
-                                                            <li> {{ moment.dag }} {{ moment.maand }} {{ moment.jaar }}</li>
-                                                            <li> {{ moment.uur }} </li>
-                                                            <li> {{ moment.duur }}  </li>
-                                                          </ul>
-                                                          
-                                                        </div>
-                                                      </div>
-                                                      <div class="row justify-content-center">
-                                                          <div class="col-10 col-md-4">
-                                                              <img id="qrcode-img" src="{{ 'assets/images/qrcode.jpg' | relative_url }}" alt="qrcode">
-                                                          </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <form method="get" action="{{'assets/images/qrcode.jpg' | relative_url }}">
-                                                                <button type="submit" class="btn btn-primary shinny">Download QR-code</button>                                                        
-                                                            </form>
-                                                        </div>
-                                                    </div>
+                                    </div>
+                                    <div id="{{ moment.id }}" class="sublinks collapse">
+                                        <div class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <ul>
+                                                        <li> {{ moment.dag }} {{ moment.maand }} {{ moment.jaar }}</li>
+                                                        <li> {{ moment.uur }} </li>
+                                                        <li> {{ moment.duur }} </li>
+                                                    </ul>
+
                                                 </div>
-                                         </div>
-                                         {%- endfor %}
-                                         <div class="list-group-item title"><p><b>aantal actieve reddingsacties:</b> {{ u.gereserveerde_momenten_actief }}</p>
-                                         <p><b>totaal aantal reddingsacties die je al gepland hebt:</b> {{ u.gereserveerde_momenten_totaal }}</p></div>
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="col-10 col-md-4">
+                                                    <img id="qrcode-img" src="{{ 'assets/images/qrcode.jpg' | relative_url }}" alt="qrcode">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <form method="get" action="{{'assets/images/qrcode.jpg' | relative_url }}">
+                                                        <button type="submit" class="btn btn-primary shinny">Download QR-code</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {%- endfor %}
+                                    <div class="list-group-item title">
+                                        <p>
+                                            <b>aantal actieve reddingsacties:</b> {{ u.gereserveerde_momenten_actief }}</p>
+                                        <p>
+                                            <b>totaal aantal reddingsacties die je al gepland hebt:</b> {{ u.gereserveerde_momenten_totaal
+                                            }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -102,3 +112,4 @@ nav_icon: ac
             </div>
         </div>
     </div>
+</div>

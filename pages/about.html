@@ -70,79 +70,77 @@ sections:
     section_img_id: credit_gold     
     section_order: 7
 ---
-{% assign sections = page.sections | sort: 'section_order' %}
-{%- assign id_counter = 1 %}
-    {%- for section in sections %}
-            {%- assign value = section.section_order | modulo:2 %}
-            {%- if value == 1 %}
-            <div class="color-section01  about_title" id="deel0{{ id_counter}}">
-                <div class="container shift-left">
-                    <div class="row">
-                        <div class="col-12 ">
-                            <h3>{{ section.section_title }}</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-5 order-2 order-md-1">
-                            <p>{{ section.section_text}}</p>
-                        </div>
-                        <div class="col-12 col-md-5 offset-md-2 order-1 order-md-2">
-                                <img class="about_img {{ section.section_img_class }}" id="{{ section.section_img_id }}" src="{{ section.section_src }}" alt="{{ section.section_img_id }}">
-                            </div>
-                    </div>
-                <br>
-                <div class="col-11 center-arrow ">
-                <div class="row justify-content-center ">
-                    <div class="col-1">
-                        {%- if id_counter == 7 %}
-                        <a href="#deel01">
-                                <img class="arrow-up shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go up">
-                            </a>
-                        {%- else %}
-                        <a href="#deel0{{ id_counter | plus:1 }}">
-                                <img class="arrow shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                    
-                            </a>
-                        {%- endif %}
-                    </div>
-                </div>
-                
+
+{% assign sections = page.sections | sort: 'section_order' %} {%- assign id_counter = 1 %} {%- for section in sections %}
+{%- assign value = section.section_order | modulo:2 %} {%- if value == 1 %}
+<div class="color-section01  about_title" id="deel0{{ id_counter}}">
+    <div class="container shift-left">
+        <div class="row">
+            <div class="col-12 ">
+                <h3>{{ section.section_title }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-5 order-2 order-md-1">
+                <p>{{ section.section_text}}</p>
+            </div>
+            <div class="col-12 col-md-5 offset-md-2 order-1 order-md-2">
+                <img class="about_img {{ section.section_img_class }}" id="{{ section.section_img_id }}" src="{{ section.section_src }}"
+                    alt="{{ section.section_img_id }}">
+            </div>
+        </div>
+        <br>
+        <div class="col-11 center-arrow ">
+            <div class="row justify-content-center ">
+                <div class="col-1">
+                    {%- if id_counter == 7 %}
+                    <a href="#deel01">
+                        <img class="arrow-up shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go up">
+                    </a>
+                    {%- else %}
+                    <a href="#deel0{{ id_counter | plus:1 }}">
+                        <img class="arrow shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">
+                    </a>
+                    {%- endif %}
                 </div>
             </div>
+
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="color-section02  about_title" id="deel0{{ id_counter}}">
+    <div class="container shift-left">
+        <div class="row">
+            <div class="col-12 ">
+                <h3>{{ section.section_title }}</h3>
             </div>
-            {% else %}
-            <div class="color-section02  about_title" id="deel0{{ id_counter}}">
-                <div class="container shift-left">
-                    <div class="row">
-                        <div class="col-12 ">
-                            <h3>{{ section.section_title }}</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-5 order-1 order-md-1">
-                                <img class="about_img {{ section.section_img_class }}" id="{{ section.section_img_id }}" src="{{ section.section_src }}" alt="{{ section.section_img_id }}">
-                            </div>    
-                        <div class="col-12 col-md-7 col-md-5 order-2 order-md-2">
-                            <p>{{ section.section_text}}</p>
-                        </div>
-                    </div>
-                <br>
-                <div class="col-11 center-arrow">
-                        <div class="row justify-content-center">
-                        <div class="col-1">
-                                {%- if id_counter == 7 %}
-                                <a href="#deel01">
-                                        <img class="arrow-up shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go up">
-                                    </a>
-                                {%- else %}
-                                <a href="#deel0{{ id_counter | plus:1 }}">
-                                        <img class="arrow shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">                                    
-                                    </a>
-                                {%- endif %}
-                            </div>
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-5 order-1 order-md-1">
+                <img class="about_img {{ section.section_img_class }}" id="{{ section.section_img_id }}" src="{{ section.section_src }}"
+                    alt="{{ section.section_img_id }}">
+            </div>
+            <div class="col-12 col-md-7 col-md-5 order-2 order-md-2">
+                <p>{{ section.section_text}}</p>
+            </div>
+        </div>
+        <br>
+        <div class="col-11 center-arrow">
+            <div class="row justify-content-center">
+                <div class="col-1">
+                    {%- if id_counter == 7 %}
+                    <a href="#deel01">
+                        <img class="arrow-up shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go up">
+                    </a>
+                    {%- else %}
+                    <a href="#deel0{{ id_counter | plus:1 }}">
+                        <img class="arrow shine" src="{{ 'assets/images/trans.png' | relative_url }}" alt="Go down">
+                    </a>
+                    {%- endif %}
                 </div>
             </div>
-            </div>
-            {% endif %}
-    {%- assign id_counter = id_counter | plus:1 %}
-    {%- endfor %}
+        </div>
+    </div>
+</div>
+{% endif %} {%- assign id_counter = id_counter | plus:1 %} {%- endfor %}
