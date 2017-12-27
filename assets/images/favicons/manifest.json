@@ -2,7 +2,7 @@
     "name": "Mega Missant",
     "icons": [
         {
-            "src": "{{ site.baseurl }}/assets/images/favicons/android-chrome-96x96.png",
+            "src": "/assets/images/favicons/android-chrome-96x96.png",
             "sizes": "96x96",
             "type": "image/png"
         }
