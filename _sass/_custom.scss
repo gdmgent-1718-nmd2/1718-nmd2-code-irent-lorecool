@@ -1,238 +1,239 @@
-
-
 //------------------------------------------//
 //              General                     //
 //------------------------------------------//
 body {
-  font-family: $Quattrocento;
-  font-weight: $Quattrocento-regular;
-  font-size: 13px;
-  color: $black;
-  //background: #cdc url("https://i.imgur.com/LtdNdBp.jpg") repeat top left;
-  padding-top: 75px;
-  background-color: $green;
-}
-.tekst-wit{
-color: $white;
-font-size: 12px;
-}
-.tekst-wit li{
-  margin-bottom: 5px;
-  }
-
-.shift-left{
-  padding-left:70px;
-  height:58vh;
-  margin-bottom: 5px;
-  position: relative;
-  padding-top:10px;
+    font-family: $Quattrocento;
+    font-weight: $Quattrocento-regular;
+    font-size: 13px;
+    color: $black; //background: #cdc url("https://i.imgur.com/LtdNdBp.jpg") repeat top left;
+    padding-top: 75px;
+    background-color: $green;
 }
 
-h1,h2,h3,h4{
-  font-family: $Oswald;
-  font-weight: $Oswald-bold;
+.tekst-wit {
+    color: $white;
+    font-size: 12px;
 }
 
-.viewport-100{
-  height: 60vh;
+.tekst-wit li {
+    margin-bottom: 5px;
 }
 
-.card{
-margin-top:20px;
+.shift-left {
+    padding-left: 70px;
+    height: 58vh;
+    margin-bottom: 5px;
+    position: relative;
+    padding-top: 10px;
 }
 
-img{
-  width: 100%;
-}
-.card-img-top{
-  width:98%;
-  align-self: center;
-  margin-top:5px;
-  margin-left:3px;
-  margin-right:3px;
-  margin-bottom: 5px;
+h1,
+h2,
+h3,
+h4 {
+    font-family: $Oswald;
+    font-weight: $Oswald-bold;
 }
 
-.text-warning{
-  font-size: 12px;
-  line-height:16px;
-  margin-top:5px;
+.viewport-100 {
+    height: 60vh;
 }
 
-#icon-mega-missant{
-  background: $icon-mega-missant;
-  width: $icon-sm;
-  height: $icon-sm;
+.card {
+    margin-top: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.card-img-top {
+    width: 98%;
+    align-self: center;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.text-warning {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 5px;
+}
+
+#icon-mega-missant {
+    background: $icon-mega-missant;
+    width: $icon-sm;
+    height: $icon-sm;
 }
 
 //              button                      //
-
 .shinny {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: $Oswald;
-  font-weight: $Oswald-light;
-
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  color: $col-shinny-button;
-  border: 1px solid $col-shinny-button;
-  border-radius: $corner-radius;
-
-  box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $Oswald;
+    font-weight: $Oswald-light;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: $col-shinny-button;
+    border: 1px solid $col-shinny-button;
+    border-radius: $corner-radius;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
+
 .shinny:hover {
-  color: white;
-  box-shadow: 0 0 30px 0 rgba(236, 200, 17, 0.5);
-  background-color: $col-shinny-button;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+    color: white;
+    box-shadow: 0 0 30px 0 rgba(236, 200, 17, 0.5);
+    background-color: $col-shinny-button;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
+
 .shinny:hover:before {
-  -webkit-animation: shine 0.5s 0s linear;
-  -moz-animation: shine 0.5s 0s linear;
-  animation: shine 0.5s 0s linear;
+    -webkit-animation: shine 0.5s 0s linear;
+    -moz-animation: shine 0.5s 0s linear;
+    animation: shine 0.5s 0s linear;
 }
+
 .shinny:active {
-  box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: box-shadow 0.2s ease-in;
-  -moz-transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
 }
+
 .shinny:before {
-  content: '';
-  display: block;
-  width: 0px;
-  height: 86%;
-  position: absolute;
-  top: 7%;
-  left: 0%;
-  opacity: 0;
-  background: $col-shinny-button;
-  box-shadow: 0 0 15px 3px white;
-  -webkit-transform: skewX(-20deg);
-  -moz-transform: skewX(-20deg);
-  -ms-transform: skewX(-20deg);
-  -o-transform: skewX(-20deg);
-  transform: skewX(-20deg);
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: $col-shinny-button;
+    box-shadow: 0 0 15px 3px white;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
 }
-.shinny.text{
-  font-family: $Oswald;
-  font-weight: $Oswald-regular;
+
+.shinny.text {
+    font-family: $Oswald;
+    font-weight: $Oswald-regular;
 }
 
 @-webkit-keyframes shine {
-  from {
-    opacity: 0;
-    left: 0%;
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    left: 100%;
-  }
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        left: 100%;
+    }
 }
+
 @-moz-keyframes shine {
-  from {
-    opacity: 0;
-    left: 0%;
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    left: 100%;
-  }
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        left: 100%;
+    }
 }
+
 @keyframes shine {
-  from {
-    opacity: 0;
-    left: 0%;
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    left: 100%;
-  }
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        left: 100%;
+    }
 }
 
 //          text-animation            //
 .shine {
-  position: relative;
-  text-align: center;
-  top: 10px;
-  text-shadow: 0 1px 2px rgba(0,0,0,.1);
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-  -webkit-mask-size: 200%;
-  animation: shining 4s infinite, hover 2s alternate infinite ease-in-out;
-  
-  &:after {
-    transform: translateY(30%) rotate(45deg);
-    animation: hoverSmall 2s 1s alternate infinite ease-in-out;
-  }
+    position: relative;
+    text-align: center;
+    top: 10px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shining 4s infinite, hover 2s alternate infinite ease-in-out;
+    &:after {
+        transform: translateY(30%) rotate(45deg);
+        animation: hoverSmall 2s 1s alternate infinite ease-in-out;
+    }
 }
 
 @-webkit-keyframes shining {
-  from {
-    -webkit-mask-position: 150%;
-  }
-  
-  to {
-    -webkit-mask-position: -50%;
-  }
+    from {
+        -webkit-mask-position: 150%;
+    }
+    to {
+        -webkit-mask-position: -50%;
+    }
 }
 
 @-webkit-keyframes hover {
-  from {
-    transform: translateY(-50%);
-  }
-  
-  to {
-    transform: translateY(-75%);
-  }
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(-75%);
+    }
 }
 
 @-webkit-keyframes hoverSmall {
-  from {
-    transform: translateY(30%) rotate(45deg);
-  }
-  to {
-    transform: translateY(-10%) rotate(45deg);
-  }
+    from {
+        transform: translateY(30%) rotate(45deg);
+    }
+    to {
+        transform: translateY(-10%) rotate(45deg);
+    }
 }
 
 //          the arrows            //
-img.arrow{
-  background: $icon-arrow-down-single-sm;
-  width: $icon-sm;
-  height: $icon-sm;
-  top:40px;
+img.arrow {
+    background: $icon-arrow-down-single-sm;
+    width: $icon-sm;
+    height: $icon-sm;
+    top: 40px;
+}
 
- }
+img.arrow:hover {
+    background: $icon-arrow-down-double-sm;
+}
 
- img.arrow:hover{
-   background: $icon-arrow-down-double-sm;
-  }
+img.arrow-up {
+    background: $icon-arrow-single-sm;
+    width: $icon-sm;
+    height: $icon-sm;
+    top: 40px; // transition: background-image 2s ease-in-out;
+}
 
- img.arrow-up{
-  background: $icon-arrow-single-sm;
-  width: $icon-sm;
-  height: $icon-sm;
-  top:40px;
-
- // transition: background-image 2s ease-in-out;
-
- }
- img.arrow-up:hover{
-   background: $icon-arrow-double-sm;
- }
+img.arrow-up:hover {
+    background: $icon-arrow-double-sm;
+}

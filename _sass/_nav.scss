@@ -1,305 +1,317 @@
 //------------------------------------------//
 //              navbar                      //
 //------------------------------------------//
-
-nav.navbar{
+nav.navbar {
     background: transparent!important;
-  
-  }
-  
-  .navbar #home, .navbar #vw{
+}
+
+.navbar #home,
+.navbar #vw {
     width: $icon-sm;
     height: $icon-sm;
-  }
-  .navbar #sp{
+}
+
+.navbar #sp {
     background: $icon-superpowers-sm;
     width: $icon-sm;
     height: $icon-sm;
-  }
-  .navbar #ac{
+}
+
+.navbar #ac {
     background: $icon-account-sm;
     width: $icon-sm;
     height: $icon-sm;
-  }
-  .navbar #oo{
+}
+
+.navbar #oo {
     background: $icon-overons-sm;
     width: $icon-sm;
     height: $icon-sm;
-  }
-  .navbar #qr{
+}
+
+.navbar #qr {
     background: $icon-qrcode-sm;
     width: $icon-sm;
     height: $icon-sm;
-  }
-
-  //------------------------------------------//
+} //------------------------------------------//
 //            Scroll-indicator              //
 //------------------------------------------//
-
 nav#indicator {
-    z-index:5;
+    z-index: 5;
     position: fixed;
-    width:30px;
-    top:20%;
-    left:-20%;
-    }
-  
-    nav#indicator .list-group-item {
-      width: 8px;
-      height: 40px;
-      margin-bottom: 10px;
-      //background-color: $white;
-      background-color: rgba(255, 255, 255, 0);
-      border: none;
-      position: absolute;
-      top:0;
-      left:0;
-    }
-    nav#indicator .list-group-item#item01.active,
-    nav#indicator .list-group-item#item02.active,
-    nav#indicator .list-group-item#item03.active,
-    nav#indicator .list-group-item#item04.active,
-    nav#indicator .list-group-item#item05.active,
-    nav#indicator .list-group-item#item06.active,
-    nav#indicator .list-group-item#item07.active{
-      width: $icon-l+$icon-margin;
-      height: $icon-l+$icon-margin;
-  
-    }
-      nav#indicator .list-group-item#item01.active {
-        background: $icon-light01-l;     
-      }
-      nav#indicator .list-group-item#item02.active {
-        background:$icon-light02-l;     
-      }
-      nav#indicator .list-group-item#item03.active {
-        background:$icon-light03-l;     
-      }
-      nav#indicator .list-group-item#item04.active {
-        background:$icon-light04-l;     
-      }
-      nav#indicator .list-group-item#item05.active {
-        background:$icon-light05-l;     
-      }
-      nav#indicator .list-group-item#item06.active {
-        background:$icon-light06-l;     
-      }
-      nav#indicator .list-group-item#item07.active {
-        background:$icon-light07-l;     
-      }
-  
-  //------------------------------------------//
-  //                Footer                    //
-  //------------------------------------------//
-  
-  footer{
+    width: 30px;
+    top: 20%;
+    left: -20%;
+}
+
+nav#indicator .list-group-item {
+    width: 8px;
+    height: 40px;
+    margin-bottom: 10px; //background-color: $white;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav#indicator .list-group-item#item01.active,
+nav#indicator .list-group-item#item02.active,
+nav#indicator .list-group-item#item03.active,
+nav#indicator .list-group-item#item04.active,
+nav#indicator .list-group-item#item05.active,
+nav#indicator .list-group-item#item06.active,
+nav#indicator .list-group-item#item07.active {
+    width: $icon-l+$icon-margin;
+    height: $icon-l+$icon-margin;
+}
+
+nav#indicator .list-group-item#item01.active {
+    background: $icon-light01-l;
+}
+
+nav#indicator .list-group-item#item02.active {
+    background: $icon-light02-l;
+}
+
+nav#indicator .list-group-item#item03.active {
+    background: $icon-light03-l;
+}
+
+nav#indicator .list-group-item#item04.active {
+    background: $icon-light04-l;
+}
+
+nav#indicator .list-group-item#item05.active {
+    background: $icon-light05-l;
+}
+
+nav#indicator .list-group-item#item06.active {
+    background: $icon-light06-l;
+}
+
+nav#indicator .list-group-item#item07.active {
+    background: $icon-light07-l;
+} //------------------------------------------//
+//                Footer                    //
+//------------------------------------------//
+footer {
     background-color: $purple;
     height: 285px;
     margin-top: 30px;
     color: $white;
     box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.3);
-  }
-  footer #copyright{
-  position: absolute;
-  margin-top: 10px;
-  width: 70%;
-  }
-  footer #copyright a:hover{
+}
+
+footer #copyright {
+    position: absolute;
+    margin-top: 10px;
+    width: 70%;
+}
+
+footer #copyright a:hover {
     color: $col-shinny-button;
-    }
-  
-  .link-icon{
-    margin-left:10%;
-  }
-  .link-icon #icon-superpowers{
+}
+
+.link-icon {
+    margin-left: 10%;
+}
+
+.link-icon #icon-superpowers {
     background: $icon-superpowers-md;
     width: $icon-md;
-  }
-  
-  .link-icon #icon-account{
+}
+
+.link-icon #icon-account {
     background: $icon-account-md;
     width: $icon-md;
-  }
-  
-  .link-icon #icon-overons{
+}
+
+.link-icon #icon-overons {
     background: $icon-overons-md;
     width: $icon-md;
-  }
-  .link-icon img.active {
+}
+
+.link-icon img.active {
     filter: brightness(1.5);
-  
-   }
-  
-  .link-icon a:hover img, .link-icon a:active img{
-   filter: brightness(1.5);
-  }
-  
-  /* ==============================================
+}
+
+.link-icon a:hover img,
+.link-icon a:active img {
+    filter: brightness(1.5);
+}
+
+
+/* ==============================================
   Social media menu
   ============================================== */
-  
-  a { 
-    color: inherit; 
-  }
-  
-  .menu-item, .menu-open-button {
+
+a {
+    color: inherit;
+}
+
+.menu-item,
+.menu-open-button {
     border-radius: 100%;
-      width: 40px;
-       height: 40px;
-       position: absolute;
-       color: $white;
-       text-align: center;
-       line-height: 60px;
-       font-size: 0.5em;
-       -webkit-transform: translate3d(0, 0, 0);
-       transform: translate3d(0, 0, 0);
-       -webkit-transition: -webkit-transform ease-out 200ms;
-       transition: -webkit-transform ease-out 200ms;
-       transition: transform ease-out 200ms;
-       transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
-     }
-     .menu-open-button{
-      background: $col-shinny-button;
-  
-     }
-     
-     .menu-open { display: none; }
-  .menu label{
-  
-       top: 25px;
-       left: 25px;
-       line-height: 40px!important;
-       overflow: hidden;
-     }
-     .menu {
-      right: 60px;
-      width: 30px;
-      height: 0px;
-      text-align: center;
-      box-sizing: border-box;
-      font-size: 20px;
-      position: relative;
-      top: 15px;
-      z-index: 3;
-      float: right;
-     }
-     
-     .menu-item:hover {
-       color: $black;
-     }
-     
-     .menu-item:nth-child(3),.menu-item:nth-child(4), .menu-item:nth-child(5) {
-       -webkit-transition-duration: 180ms;
-       transition-duration: 180ms;
-     }
-     
-     .menu-open-button {
-       z-index: 2;
-       -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-       transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-       -webkit-transition-duration: 400ms;
-       transition-duration: 400ms;
-       -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-       transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-       cursor: pointer;
-       box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-     }
-     
-     .menu-open-button:hover {
-       -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
-       transform: scale(1.2, 1.2) translate3d(0, 0, 0);
-     }
-     
-     .menu-open:checked + .menu-open-button {
-       -webkit-transition-timing-function: linear;
-       transition-timing-function: linear;
-       -webkit-transition-duration: 200ms;
-       transition-duration: 200ms;
-       -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-       transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-     }
-     
-     .menu-open:checked ~ .menu-item {
-       -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
-       transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
-     }
-     
-     .menu-open:checked ~ .menu-item:nth-child(3) {
-       transition-duration: 180ms;
-       -webkit-transition-duration: 180ms;
-       -webkit-transform: translate3d(8px, -64px, 0);
-       transform: translate3d(8px, -64px, 0);
-     }
-     
-     .menu-open:checked ~ .menu-item:nth-child(4) {
-       transition-duration: 280ms;
-       -webkit-transition-duration: 280ms;
-       -webkit-transform: translate3d(-64px, 24px, 0);
-       transform: translate3d(-64px, 24px, 0);
-     }
-     
-     .menu-open:checked ~ .menu-item:nth-child(5) {
-       transition-duration: 380ms;
-       -webkit-transition-duration: 380ms;
-       -webkit-transform: translate3d(-48px, -40px, 0);
-       transform: translate3d(-48px, -40px, 0);
-     }
-   
-  
-     .menu-item img{
-      position: relative;
-      top:10px;
-      left: 10px;
-     }
-     .menu-item:hover img{
-      border:white;
-     }
-  
-      img#fb{
-      background: $icon-facebook;
-      width: $icon-sm;
-      height: $icon-sm;
-  
-     }
-     img#twitter{
-      background: $icon-twitter;
-      width: $icon-sm;
-      height: $icon-sm;
-  
-     }
-     img#instagram{
-      background: $icon-instagram;
-      width: $icon-sm;
-      height: $icon-sm;
-  
-     }
-     
-     .item-1:hover img#fb{
-       background: $icon-facebook-hover;
-   
-     }
-        
-     .item-2:hover img#twitter{
-      background: $icon-twitter-hover;
-     }
-     
-     
-     
-     .item-3:hover img#instagram{
-      background: $icon-instagram-hover;
-     }
-     
-     .citem-3it {
-       margin: 24px 20px 120px 0;
-       text-align: right;
-       color: #EEEEEE;
-     }
-     
-     .citem-3it a {
-       padding: 8px 0;
-       color: #C49CDE;
-       text-decoration: none;
-       transition: all 0.3s ease 0s;
-     }
-     
-     .citem-3it a:hover { text-decoration: underline; }
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    color: $white;
+    text-align: center;
+    line-height: 60px;
+    font-size: 0.5em;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.menu-open-button {
+    background: $col-shinny-button;
+}
+
+.menu-open {
+    display: none;
+}
+
+.menu label {
+    top: 25px;
+    left: 25px;
+    line-height: 40px!important;
+    overflow: hidden;
+}
+
+.menu {
+    right: 60px;
+    width: 30px;
+    height: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    z-index: 3;
+    float: right;
+}
+
+.menu-item:hover {
+    color: $black;
+}
+
+.menu-item:nth-child(3),
+.menu-item:nth-child(4),
+.menu-item:nth-child(5) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-open-button {
+    z-index: 2;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+}
+
+.menu-open-button:hover {
+    -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked+.menu-open-button {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked~.menu-item {
+    -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+
+.menu-open:checked~.menu-item:nth-child(3) {
+    transition-duration: 180ms;
+    -webkit-transition-duration: 180ms;
+    -webkit-transform: translate3d(8px, -64px, 0);
+    transform: translate3d(8px, -64px, 0);
+}
+
+.menu-open:checked~.menu-item:nth-child(4) {
+    transition-duration: 280ms;
+    -webkit-transition-duration: 280ms;
+    -webkit-transform: translate3d(-64px, 24px, 0);
+    transform: translate3d(-64px, 24px, 0);
+}
+
+.menu-open:checked~.menu-item:nth-child(5) {
+    transition-duration: 380ms;
+    -webkit-transition-duration: 380ms;
+    -webkit-transform: translate3d(-48px, -40px, 0);
+    transform: translate3d(-48px, -40px, 0);
+}
+
+.menu-item img {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.menu-item:hover img {
+    border: white;
+}
+
+img#fb {
+    background: $icon-facebook;
+    width: $icon-sm;
+    height: $icon-sm;
+}
+
+img#twitter {
+    background: $icon-twitter;
+    width: $icon-sm;
+    height: $icon-sm;
+}
+
+img#instagram {
+    background: $icon-instagram;
+    width: $icon-sm;
+    height: $icon-sm;
+}
+
+.item-1:hover img#fb {
+    background: $icon-facebook-hover;
+}
+
+.item-2:hover img#twitter {
+    background: $icon-twitter-hover;
+}
+
+.item-3:hover img#instagram {
+    background: $icon-instagram-hover;
+}
+
+.citem-3it {
+    margin: 24px 20px 120px 0;
+    text-align: right;
+    color: #EEEEEE;
+}
+
+.citem-3it a {
+    padding: 8px 0;
+    color: #C49CDE;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.citem-3it a:hover {
+    text-decoration: underline;
+}
